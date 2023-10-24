@@ -1,0 +1,161 @@
+@import url("https://fonts.cdnfonts.com/css/open-sauce-one");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sauce One";
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 0 100px; */
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  max-width: 1600px;
+}
+
+.projects {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 35px;
+  background: rgb(197, 217, 247);
+  background: linear-gradient(
+    90deg,
+    rgba(197, 217, 247, 1) 0%,
+    rgba(54, 68, 97, 0.4458158263305322) 30%,
+    rgba(224, 250, 255, 1) 83%,
+    rgba(193, 232, 255, 1) 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  margin: 10px;
+}
+
+.description-card {
+  height: 500px;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  > .content {
+    > .title {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 44px;
+    }
+
+    > .description {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 151.34%;
+      margin-top: 3rem;
+    }
+  }
+
+  > .footer {
+    margin-top: 24px;
+
+    > button {
+      font-weight: 600;
+      font-size: 18px;
+      letter-spacing: -0.01em;
+      background: #1d1d1d;
+      color: #fff;
+      border: none;
+      outline: none;
+      border-radius: 30px;
+      /* display: flex; */
+      align-items: center;
+      padding: 18px 38px;
+      margin-right: 18px;
+    }
+
+    > button:hover {
+      background: #353434;
+    }
+    > * {
+      margin: 0 6px;
+      cursor: pointer;
+    }
+
+    > i:hover {
+      color: #353434;
+    }
+  }
+}
+
+.project-card {
+  cursor: pointer;
+  display: flex;
+  background: #343a40;
+  height: 700px;
+
+  > .content {
+    display: flex;
+    margin: 32px;
+    justify-content: space-between;
+
+    > .description {
+      > h1 {
+        color: #f8f9fa;
+      }
+
+      > p {
+        color: #e9ecef;
+      }
+    }
+
+    > i {
+      align-self: center;
+      font-size: 52px;
+    }
+  }
+
+  .image {
+    align-self: center;
+    /* position: absolute; */
+    /* margin-top: 10%; */
+    /* z-index: -1; */
+
+    > img {
+      width: 100%;
+    }
+  }
+  /* background-image: url("https://www.aboghanbari.com/static/f0f2dd77c93adb2468a85b43b49007a5/180f3/Baffy.webp"); */
+  /* position: relative; */
+}
+
+.project-card:hover {
+  /* background-size: 115% 115%; */
+  transition: all 0.3s ease-in-out;
+  /* transform: scale(1.2); */
+
+  /* perspective: 1000px; */
+  /* transform-style: preserve-3d; */
+  /* transform: rotateX(10deg) rotateY(10deg); */
+}
+
+.profile-image {
+  background-image: url("./test.jpg");
+  height: 500px;
+}
+
+.footer {
+  > .description-card {
+    height: 400px;
+  }
+}
