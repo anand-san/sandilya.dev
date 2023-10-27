@@ -1,0 +1,22 @@
+@import url("https://fonts.cdnfonts.com/css/open-sauce-one");
+
+.card {
+  background: rgb(197, 217, 247);
+  background: linear-gradient(
+    90deg,
+    rgba(197, 217, 247, 1) 0%,
+    rgba(54, 68, 97, 0.4458158263305322) 30%,
+    rgba(224, 250, 255, 1) 83%,
+    rgba(193, 232, 255, 1) 100%
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.flip {
+  transform: scaleX(-1);
+}
+
+.profile-image {
+  background-image: url("https://imgur.com/tCdXmEy.jpg");
+}
