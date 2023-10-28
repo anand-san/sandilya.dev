@@ -2,6 +2,8 @@ import { Menubar, MenubarMenu, MenubarTrigger } from "@/components/ui/menubar";
 import Image from "next/image";
 import { ProfileInfoCard } from "@/components/profile-info-card/profile-info-card";
 import ProjectInfoCard from "@/components/project-info-card/project-info-card";
+import FooterContactCard from "@/components/footer-contact-card/footer-contact-card";
+
 export default function Home() {
   return (
     <>
@@ -25,6 +27,7 @@ export default function Home() {
       <div className="lg:container mx-auto my-8">
         <ProfileInfoCard />
         <ProjectInfoCard />
+        <FooterContactCard />
       </div>
     </>
   );
