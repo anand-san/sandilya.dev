@@ -17,7 +17,7 @@ export default function FooterContactCard() {
 
   return (
     <div
-      className={`bg-gradient-to-br from-fuchsia-50 via-fuchsia-50 to-amber-50 md:order:1 flex flex-col border rounded-2xl  m-4 h-auto p-8 justify-between md:bg-gradient-to-tl`}
+      className={`bg-gradient-to-br from-orange-50 via-sky-50 to-fuchsia-50 md:order:1 flex flex-col border rounded-2xl  m-4 h-auto p-8 justify-between md:bg-gradient-to-tl`}
     >
       <h1 className="text-2xl md:text-3xl">Want to work together?</h1>
       <p className="text-s font-extralight">

@@ -14,7 +14,7 @@ export const ProfileInfoCard = () => {
       ></div>
 
       <div
-        className={`bg-gradient-to-br from-fuchsia-50 via-fuchsia-50 to-amber-50 md:order:1 flex flex-col border rounded-2xl p-8 m-4 justify-between md:bg-gradient-to-tl`}
+        className={`bg-gradient-to-br from-orange-50 via-sky-50 to-fuchsia-50 md:order:1 flex flex-col border rounded-2xl p-8 m-4 justify-between md:bg-gradient-to-tl`}
       >
         <h1 className="font-semibold text-center md:text-left text-2xl md:text-4xl">
           Hello, I&apos;m Anand, a Software Developer With 7 years of
