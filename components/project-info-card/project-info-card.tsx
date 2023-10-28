@@ -1,4 +1,4 @@
-import { ArrowUpRight } from "lucide-react";
+import { ChevronRightCircle } from "lucide-react";
 
 interface Project {
   order: number;
@@ -9,19 +9,33 @@ interface Project {
 }
 const PROJECTS: Project[] = [
   {
-    order: 0,
+    order: 1,
     title: "Talab App",
     description: "Liquor Trivia App",
     url: "https://play.google.com/store/apps/details?id=com.talabapp&hl=de&gl=US",
-    image: "bg-[url('https://i.imgur.com/UMRvf7c.png')]",
+    image: "bg-[url('https://i.imgur.com/ad8lONI.png')]",
   },
   {
-    order: 1,
+    order: 4,
     title: "Bluprint",
     description:
       "Streamlining workforce management and empowering the business to efficiently manage employee data, contracts, and compliance in one centralized platform ",
     url: "https://ps.leadsquaredapps.com",
-    image: "bg-[url('https://i.imgur.com/5Ah6Kw6.png')]",
+    image: "bg-[url('https://imgur.com/5Ah6Kw6.png')]",
+  },
+  {
+    order: 2,
+    title: "Odd Beans Coffee",
+    description: "Experiience the real taste of 'Good Coffee'",
+    url: "https://www.oddbeanscoffee.com/",
+    image: "bg-[url('https://imgur.com/0RZQdPi.png')]",
+  },
+  {
+    order: 3,
+    title: "Sure Clickz",
+    description: "Experiience the real taste of 'Good Coffee'",
+    url: "https://sureclickz.com/",
+    image: "bg-[url('https://imgur.com/jDi1fuT.png')]",
   },
 ];
 
@@ -42,7 +56,7 @@ export default function ProjectInfoCard() {
                 </h4>
               </span>
 
-              <ArrowUpRight size={40} />
+              <ChevronRightCircle size={28} />
             </div>
           </div>
         )
