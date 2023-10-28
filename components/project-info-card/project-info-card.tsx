@@ -34,7 +34,7 @@ const PROJECTS: Project[] = [
   {
     order: 2,
     title: "Sure Clickz",
-    description: "Experiience the real taste of 'Good Coffee'",
+    description: "Online shop for https://xerobit.in",
     url: "https://sureclickz.com/",
     imagePath: "bg-[url('/images/projects/sureclickz.png')]",
   },
