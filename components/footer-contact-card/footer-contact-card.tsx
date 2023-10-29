@@ -18,14 +18,14 @@ export default function FooterContactCard() {
   return (
     <section className="h-screen grid snap-start snap-always items-center">
       <div
-        className={`bg-gradient-to-br from-orange-50 via-sky-50 to-fuchsia-50 md:order:1 flex flex-col border rounded-2xl  m-4 p-8 justify-between md:bg-gradient-to-tl h-56 sm:h-72`}
+        className={`md:order:1 flex flex-col m-4 p-8 justify-between h-56 sm:h-72 text-center`}
       >
         <h1 className="text-2xl md:text-3xl">Want to work together?</h1>
         <p className="text-s font-extralight">
           Feel free to reach out for collaborations or just a friendly hello
         </p>
         <span className="text-s font-light">hello@anandks.com</span>
-        <div className="flex mt-12 justify-center md:justify-start">
+        <div className="flex mt-12 justify-center">
           <Link href="mailto:hello@anandks.com">
             <Send
               strokeWidth={1.25}

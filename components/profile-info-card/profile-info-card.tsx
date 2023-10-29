@@ -8,13 +8,13 @@ export const ProfileInfoCard = () => {
   } = getConfig();
 
   return (
-    <section className="h-screen grid md:grid-cols-[2fr,1fr] snap-start snap-always items-center">
+    <section className="lg:container mx-auto my-8 h-screen grid md:grid-cols-[2fr,1fr] snap-start snap-always items-center ">
       <div
-        className={`bg-[url('https://imgur.com/tCdXmEy.jpg')] bg-left bg-cover bg-no-repeat md:order-2 border rounded-2xl m-4 scale-x-[-1] hidden md:grid min-h-[384px]`}
+        className={`bg-[url('https://imgur.com/tCdXmEy.jpg')] bg-left bg-cover bg-no-repeat md:order-2 border rounded-xl m-4 scale-x-[-1] hidden md:grid min-h-[384px]`}
       ></div>
 
       <div
-        className={`bg-gradient-to-br from-orange-50 via-sky-50 to-fuchsia-50 md:order:1 flex flex-col border rounded-2xl p-8 m-4 justify-between md:bg-gradient-to-tl min-h-[384px]`}
+        className={`md:order:1 flex flex-col p-8 m-4 justify-between min-h-[384px]`}
       >
         <h1 className="font-semibold text-center md:text-left text-2xl md:text-4xl">
           Hello, I&apos;m Anand, a Software Developer With 7 years of

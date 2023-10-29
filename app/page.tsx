@@ -6,8 +6,8 @@ import FooterContactCard from "@/components/footer-contact-card/footer-contact-c
 
 export default function Home() {
   return (
-    <>
-      <Menubar className="justify-between">
+    <div className="bg-gradient-to-br from-orange-50 via-sky-50 to-fuchsia-50 md:bg-gradient-to-tl">
+      <Menubar className="justify-between bg-transparent">
         <Image
           src="https://imgur.com/NWnsFzH.png"
           alt="logo"
@@ -24,11 +24,11 @@ export default function Home() {
           </MenubarMenu>
         </div>
       </Menubar>
-      <div className="lg:container mx-auto my-8">
+      <div>
         <ProfileInfoCard />
         <ProjectInfoCard />
         <FooterContactCard />
       </div>
-    </>
+    </div>
   );
 }
