@@ -38,6 +38,27 @@ const PROJECTS: Project[] = [
     url: "https://sureclickz.com/",
     imagePath: "bg-[url('/images/projects/sureclickz.png')]",
   },
+  {
+    order: 5,
+    title: "Quantilope GmbH",
+    description: "",
+    url: "https://www.quantilope.com/",
+    imagePath: "bg-[url('/images/projects/quantilope.webp')]",
+  },
+  {
+    order: 6,
+    title: "Mieterengel GmbH",
+    description: "",
+    url: "https://mieterengel.de/",
+    imagePath: "bg-[url('/images/projects/mieterengel.jpg')]",
+  },
+  {
+    order: 7,
+    title: "Leadsquared",
+    description: "",
+    url: "https://leadsquared.com/",
+    imagePath: "bg-[url('/images/projects/leadsquared.png')]",
+  },
 ];
 
 export default function ProjectInfoCard() {
