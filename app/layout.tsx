@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="snap-y snap-mandatory scroll-pt-6">
       <body className={roboto.className}>{children}</body>
     </html>
   );

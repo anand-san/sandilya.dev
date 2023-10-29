@@ -63,12 +63,12 @@ const PROJECTS: Project[] = [
 
 export default function ProjectInfoCard() {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2">
+    <section className="h-screen snap-start snap-always grid grid-flow-col auto-cols-[80%] gap-3 overflow-x-auto items-center snap-x snap-mandatory mx-4">
       {PROJECTS.sort(sortByOrder).map(
         ({ order, title, description, url, imagePath }) => (
           <Link key={order} href={url} target="_blank">
             <div
-              className={`transition-all border rounded-2xl m-4 sm:m-y-2 h-80 md:h-96 ${imagePath} bg-no-repeat bg-cover bg-center cursor-pointer bg-origin-padding`}
+              className={`transition-all border rounded-2xl m-4 sm:m-y-2 h-80 md:h-[480px] ${imagePath} bg-no-repeat bg-cover bg-center cursor-pointer bg-origin-padding snap-center snap-always`}
             >
               <div className="p-4 rounded-2xl rounded-b-none flex justify-between items-center">
                 <span className="whitespace-nowrap overflow-hidden text-ellipsis max-w-sm">
