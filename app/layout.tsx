@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import "./globals.css";
+import { cn } from "@/lib/utils";
 
 const roboto = Roboto({ subsets: ["greek"], weight: "300" });
 
@@ -17,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="snap-y snap-mandatory" suppressHydrationWarning>
-      <body className={roboto.className}>
+      <body className={cn(roboto.className, "dark:text-slate-200")}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
