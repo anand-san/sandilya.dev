@@ -4,6 +4,7 @@ import { ProfileInfoCard } from "@/components/profile-info-card/profile-info-car
 import ProjectInfoCard from "@/components/project-info-card/project-info-card";
 import FooterContactCard from "@/components/footer-contact-card/footer-contact-card";
 import { DarkModeToggle } from "@/components/DarkModeToggle";
+import { BookUser, GanttChartSquare, Mails } from "lucide-react";
 
 export default function Home() {
   return (
@@ -18,10 +19,22 @@ export default function Home() {
         />
         <div className="flex">
           <MenubarMenu>
-            <MenubarTrigger>Projects</MenubarTrigger>
+            <MenubarTrigger>
+              <p className="hidden sm:block">Projects</p>
+              <GanttChartSquare className="sm:hidden block" />
+            </MenubarTrigger>
           </MenubarMenu>
           <MenubarMenu>
-            <MenubarTrigger>Contact</MenubarTrigger>
+            <MenubarTrigger>
+              <p className="hidden sm:block">Contact</p>
+              <Mails className="sm:hidden block" />
+            </MenubarTrigger>
+          </MenubarMenu>
+          <MenubarMenu>
+            <MenubarTrigger>
+              <p className="hidden sm:block">Resume</p>
+              <BookUser className="sm:hidden block" />
+            </MenubarTrigger>
           </MenubarMenu>
         </div>
         <DarkModeToggle />
