@@ -5,6 +5,8 @@ import ProjectInfoCard from "@/components/project-info-card/project-info-card";
 import FooterContactCard from "@/components/footer-contact-card/footer-contact-card";
 import { DarkModeToggle } from "@/components/DarkModeToggle";
 import { BookUser, GanttChartSquare, Mails } from "lucide-react";
+import TestomonialsCard from "@/components/testomonials-card";
+import { TooltipProvider } from "@/components/ui/tooltip";
 
 export default function Home() {
   return (
@@ -40,9 +42,12 @@ export default function Home() {
         <DarkModeToggle />
       </Menubar>
       <div>
-        <ProfileInfoCard />
-        <ProjectInfoCard />
-        <FooterContactCard />
+        <TooltipProvider delayDuration={100} skipDelayDuration={100}>
+          <ProfileInfoCard />
+          <ProjectInfoCard />
+          <TestomonialsCard />
+          <FooterContactCard />
+        </TooltipProvider>
       </div>
     </div>
   );
