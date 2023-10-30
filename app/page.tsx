@@ -3,11 +3,12 @@ import Image from "next/image";
 import { ProfileInfoCard } from "@/components/profile-info-card/profile-info-card";
 import ProjectInfoCard from "@/components/project-info-card/project-info-card";
 import FooterContactCard from "@/components/footer-contact-card/footer-contact-card";
+import { DarkModeToggle } from "@/components/DarkModeToggle";
 
 export default function Home() {
   return (
-    <div className="bg-gradient-to-br from-orange-50 via-sky-50 to-fuchsia-50 md:bg-gradient-to-tl">
-      <Menubar className="justify-between bg-transparent">
+    <div className="bg-gradient-to-l from-orange-50 via-sky-50 to-fuchsia-50 dark:from-stone-900 dark:to-stone-900">
+      <Menubar className="justify-between bg-gradient-to-l from-orange-50 via-sky-50 to-fuchsia-50 dark:from-stone-900  dark:to-stone-900 fixed w-screen bottom-0 left-0 z-10 sm:top-0">
         <Image
           src="https://imgur.com/NWnsFzH.png"
           alt="logo"
@@ -23,6 +24,7 @@ export default function Home() {
             <MenubarTrigger>Contact</MenubarTrigger>
           </MenubarMenu>
         </div>
+        <DarkModeToggle />
       </Menubar>
       <div>
         <ProfileInfoCard />

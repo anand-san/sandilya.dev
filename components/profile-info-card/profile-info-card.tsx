@@ -56,7 +56,7 @@ export const ProfileInfoCard = () => {
               <Github
                 strokeWidth={1.25}
                 size={36}
-                className="ml-4 text-[#171515] hover:fill-[#171515] cursor-pointer"
+                className="ml-4 text-[#171515] hover:fill-[#171515] dark:text-[#fff] dark:hover:fill-[#fff] cursor-pointer"
               />
             </Link>
           </div>
