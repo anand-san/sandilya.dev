@@ -1,6 +1,12 @@
 import { Instagram, Linkedin, Twitter, Github } from "lucide-react";
 import getConfig from "next/config";
 import Link from "next/link";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 export const ProfileInfoCard = () => {
   const {
@@ -31,34 +37,67 @@ export const ProfileInfoCard = () => {
             </button>
           </Link>
           <div className="flex mt-8 md:mt-0">
-            <Link href={SOCIAL_URLS.INSTAGRAM} target="_blank">
-              <Instagram
-                strokeWidth={1.25}
-                size={36}
-                className="ml-4 text-[#d62976] hover:fill-[#f7d6bc] cursor-pointer"
-              />
-            </Link>
-            <Link href={SOCIAL_URLS.LINKEDIN} target="_blank">
-              <Linkedin
-                strokeWidth={1.25}
-                size={36}
-                className="ml-4 text-[#0072b1] hover:fill-[#0072b1] cursor-pointer"
-              />
-            </Link>
-            <Link href={SOCIAL_URLS.TWITTER} target="_blank">
-              <Twitter
-                strokeWidth={1.25}
-                size={36}
-                className="ml-4 text-[#1DA1F2] hover:fill-[#1DA1F2] cursor-pointer"
-              />
-            </Link>
-            <Link href={SOCIAL_URLS.GITHUB} target="_blank">
-              <Github
-                strokeWidth={1.25}
-                size={36}
-                className="ml-4 text-[#171515] hover:fill-[#171515] dark:text-[#fff] dark:hover:fill-[#fff] cursor-pointer"
-              />
-            </Link>
+            <TooltipProvider delayDuration={100} skipDelayDuration={100}>
+              <Tooltip>
+                <TooltipTrigger>
+                  <Link href={SOCIAL_URLS.INSTAGRAM} target="_blank">
+                    <Instagram
+                      strokeWidth={1.25}
+                      size={36}
+                      className="ml-4 text-[#d62976] hover:fill-[#f7d6bc] cursor-pointer"
+                    />
+                  </Link>
+                </TooltipTrigger>
+                <TooltipContent side="bottom">
+                  <p>Instagram</p>
+                </TooltipContent>
+              </Tooltip>
+
+              <Tooltip>
+                <TooltipTrigger>
+                  <Link href={SOCIAL_URLS.LINKEDIN} target="_blank">
+                    <Linkedin
+                      strokeWidth={1.25}
+                      size={36}
+                      className="ml-4 text-[#0072b1] hover:fill-[#0072b1] cursor-pointer"
+                    />
+                  </Link>
+                </TooltipTrigger>
+                <TooltipContent side="bottom">
+                  <p>Linkedin</p>
+                </TooltipContent>
+              </Tooltip>
+
+              <Tooltip>
+                <TooltipTrigger>
+                  <Link href={SOCIAL_URLS.TWITTER} target="_blank">
+                    <Twitter
+                      strokeWidth={1.25}
+                      size={36}
+                      className="ml-4 text-[#1DA1F2] hover:fill-[#1DA1F2] cursor-pointer"
+                    />
+                  </Link>
+                </TooltipTrigger>
+                <TooltipContent side="bottom">
+                  <p>Twitter/ X</p>
+                </TooltipContent>
+              </Tooltip>
+
+              <Tooltip>
+                <TooltipTrigger>
+                  <Link href={SOCIAL_URLS.GITHUB} target="_blank">
+                    <Github
+                      strokeWidth={1.25}
+                      size={36}
+                      className="ml-4 text-[#171515] hover:fill-[#171515] dark:text-[#fff] dark:hover:fill-[#fff] cursor-pointer"
+                    />
+                  </Link>
+                </TooltipTrigger>
+                <TooltipContent side="bottom">
+                  <p>Github</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
           </div>
         </div>
       </div>
