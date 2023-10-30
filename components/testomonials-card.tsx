@@ -30,8 +30,9 @@ export default function TestomonialsCard() {
               <div
                 key={order}
                 className={cn(
-                  "border border-transparent cursor-pointer rounded-xl py-8 px-20 flex  hover:border-slate-200 mb-6",
-                  order === activeTestimonialIndex && "border-slate-200"
+                  "border border-transparent cursor-pointer rounded-xl py-8 px-20 flex  hover:border-neutral-200 dark:hover:border-neutral-700 mb-6",
+                  order === activeTestimonialIndex &&
+                    "border-neutral-200 dark:border-neutral-700"
                 )}
                 onClick={() => setActiveTestimonialIndex(order)}
               >
