@@ -63,7 +63,7 @@ const PROJECTS: Project[] = [
 
 export default function ProjectInfoCard() {
   return (
-    <section className="h-screen snap-start snap-always grid grid-flow-col auto-cols-[80%] lg:auto-cols-[46%] gap-3 overflow-x-auto items-center snap-x snap-mandatory mx-4">
+    <section className="md:h-screen pt-8 md:pt-0 md:snap-start md:snap-always grid grid-flow-col auto-cols-[80%] lg:auto-cols-[46%] gap-3 overflow-x-auto items-center snap-x snap-mandatory mx-4">
       {PROJECTS.sort(sortByOrder).map(
         ({ order, title, description, url, imagePath }) => (
           <Link key={order} href={url} target="_blank">

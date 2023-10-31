@@ -19,7 +19,7 @@ export default function TestomonialsCard() {
     useState<number>(1);
 
   return (
-    <section className="h-screen flex snap-start snap-always items-center justify-center">
+    <section className="md:h-screen pt-8 md:pt-0 flex md:snap-start md:snap-always items-center justify-center">
       <div className="w-[80vw] h-[70vh]">
         <h1 className="text-center text-5xl mb-24 uppercase tracking-wider">
           What people say

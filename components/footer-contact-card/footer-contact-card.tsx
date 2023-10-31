@@ -15,9 +15,9 @@ export default function FooterContactCard() {
   } = getConfig();
 
   return (
-    <section className="h-screen grid snap-start snap-always items-center">
+    <section className="md:h-screen pt-8 md:pt-0 grid md:snap-start md:snap-always items-center">
       <div
-        className={`md:order:1 flex flex-col m-4 p-8 justify-between h-56 sm:h-72 text-center`}
+        className={`flex flex-col m-4 p-8 justify-between h-56 sm:h-72 text-center`}
       >
         <h1 className="text-2xl md:text-3xl">Want to work together?</h1>
         <p className="text-s font-extralight">

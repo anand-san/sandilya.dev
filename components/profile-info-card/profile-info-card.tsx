@@ -14,7 +14,7 @@ export const ProfileInfoCard = () => {
   } = getConfig();
 
   return (
-    <section className="lg:container mx-auto my-8 h-screen grid md:grid-cols-[2fr,1fr] snap-start snap-always items-center ">
+    <section className="lg:container mx-auto pt-4 sm:pt-8 md:h-screen grid md:grid-cols-[2fr,1fr] md:snap-start md:snap-always items-center ">
       <div
         className={`bg-[url('https://imgur.com/tCdXmEy.jpg')] bg-left bg-cover bg-no-repeat md:order-2 border rounded-xl m-4 scale-x-[-1] hidden md:grid min-h-[384px]`}
       ></div>
