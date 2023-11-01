@@ -63,17 +63,22 @@ const PROJECTS: Project[] = [
 
 export default function ProjectInfoCard() {
   return (
-    <section className="md:h-screen pt-8 md:pt-0 md:snap-start md:snap-always grid grid-flow-col auto-cols-[80%] lg:auto-cols-[46%] gap-3 overflow-x-auto items-center snap-x snap-mandatory mx-4">
+    <section className="md:h-screen mt-6 md:mt-0 md:snap-start md:snap-always grid md:grid-flow-col md:auto-cols-[80%] lg:auto-cols-[46%] md:gap-3 md:overflow-x-auto items-center md:snap-x md:snap-mandatory mx-6">
+      <h1 className="text-center text-3xl my-8 uppercase tracking-wider">
+        Projects
+      </h1>
       {PROJECTS.sort(sortByOrder).map(
         ({ order, title, description, url, imagePath }) => (
           <Link key={order} href={url} target="_blank">
             <div
-              className={`transition-all border rounded-2xl m-4 sm:m-y-2 h-80 md:h-[480px] ${imagePath} bg-no-repeat bg-cover bg-center cursor-pointer bg-origin-padding snap-center snap-always`}
+              className={`transition-all border rounded-2xl mt-8  sm:m-y-2 h-72 md:h-[480px] ${imagePath} bg-no-repeat bg-cover bg-center cursor-pointer bg-origin-padding md:snap-center md:snap-always shadow-md`}
             >
               <div className="p-4 rounded-2xl rounded-b-none flex justify-between items-center">
                 <span className="whitespace-nowrap overflow-hidden text-ellipsis max-w-sm">
-                  <h1 className="text-2xl font-semibold">{title}</h1>
-                  <h4 className="font-light text-sm text-slate-500">
+                  <h1 className="text-2xl font-semibold text-zinc-800 dark:text-zinc-200">
+                    {title}
+                  </h1>
+                  <h4 className="font-light text-sm text-zinc-500 dark:text-zinc-200 dark:font-semilight w-8">
                     {description}
                   </h4>
                 </span>
@@ -87,6 +92,7 @@ export default function ProjectInfoCard() {
           </Link>
         )
       )}
+      <hr className="text-slate-900 m-auto w-[20vw] mt-16 md:hidden" />
     </section>
   );
 }

@@ -16,11 +16,11 @@ export const ProfileInfoCard = () => {
   return (
     <section className="lg:container mx-auto pt-4 sm:pt-8 md:h-screen grid md:grid-cols-[2fr,1fr] md:snap-start md:snap-always items-center ">
       <div
-        className={`bg-[url('https://imgur.com/tCdXmEy.jpg')] bg-left bg-cover bg-no-repeat md:order-2 border rounded-xl m-4 scale-x-[-1] hidden md:grid min-h-[384px]`}
+        className={`bg-[url('https://imgur.com/tCdXmEy.jpg')] bg-left bg-cover bg-no-repeat md:order-2 border rounded-xl m-4 scale-x-[-1] min-h-[200px] md:grid md:min-h-[384px] shadow-xl`}
       ></div>
 
       <div
-        className={`md:order:1 flex flex-col p-8 m-4 justify-between min-h-[384px]`}
+        className={`md:order:1 flex flex-col p-8 pb-0 md:m-4 justify-between min-h-[384px]`}
       >
         <h1 className="font-semibold text-center md:text-left text-2xl md:text-4xl">
           Hello, I&apos;m Anand, a Software Developer With 7 years of
@@ -101,6 +101,7 @@ export const ProfileInfoCard = () => {
           </div>
         </div>
       </div>
+      <hr className="text-slate-900 m-auto w-[20vw] mt-16 md:hidden" />
     </section>
   );
 };

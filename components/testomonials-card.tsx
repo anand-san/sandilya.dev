@@ -19,9 +19,9 @@ export default function TestomonialsCard() {
     useState<number>(1);
 
   return (
-    <section className="md:h-screen pt-8 md:pt-0 flex md:snap-start md:snap-always items-center justify-center">
+    <section className="md:h-screen pt-16 md:pt-0 flex md:snap-start md:snap-always items-center justify-center">
       <div className="w-[80vw] h-[70vh]">
-        <h1 className="text-center text-5xl mb-24 uppercase tracking-wider">
+        <h1 className="text-center text-3xl mb-16 md:mb-24 uppercase tracking-wider">
           What people say
         </h1>
         <div className="grid grid-cols-2 gap-12 justify-around">
@@ -66,7 +66,7 @@ export default function TestomonialsCard() {
                       </TooltipContent>
                     </Tooltip>
                   </span>
-                  <span className="font-semilight text-sm text-slate-600">
+                  <span className="font-semilight text-sm text-zinc-400">
                     {designation}
                   </span>
                 </div>
