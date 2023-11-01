@@ -101,7 +101,7 @@ export const ProfileInfoCard = () => {
           </div>
         </div>
       </div>
-      <hr className="text-slate-900 m-auto w-[20vw] mt-16 md:hidden" />
+      <hr className="dark:bg-white m-auto w-[20vw] mt-16 md:hidden" />
     </section>
   );
 };

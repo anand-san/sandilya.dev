@@ -83,6 +83,7 @@ export default function TestomonialsCard() {
           </div>
         </div>
       </div>
+      <hr className="dark:bg-white m-auto w-[20vw] mt-16 md:hidden" />
     </section>
   );
 }

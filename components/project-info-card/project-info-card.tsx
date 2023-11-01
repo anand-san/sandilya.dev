@@ -63,7 +63,7 @@ const PROJECTS: Project[] = [
 
 export default function ProjectInfoCard() {
   return (
-    <section className="md:h-screen mt-6 md:mt-0 md:snap-start md:snap-always grid md:grid-flow-col md:auto-cols-[80%] lg:auto-cols-[46%] md:gap-3 md:overflow-x-auto items-center md:snap-x md:snap-mandatory mx-6">
+    <section className=" mt-6 md:mt-0 md:snap-start md:snap-always grid md:gap-3 md:grid-cols-2 items-center mx-6">
       <h1 className="text-center text-3xl my-8 uppercase tracking-wider">
         Projects
       </h1>
@@ -71,7 +71,7 @@ export default function ProjectInfoCard() {
         ({ order, title, description, url, imagePath }) => (
           <Link key={order} href={url} target="_blank">
             <div
-              className={`transition-all border rounded-2xl mt-8  sm:m-y-2 h-72 md:h-[480px] ${imagePath} bg-no-repeat bg-cover bg-center cursor-pointer bg-origin-padding md:snap-center md:snap-always shadow-md`}
+              className={`transition-all border rounded-2xl mt-8  sm:m-y-2 h-72 md:h-[480px] ${imagePath} bg-no-repeat bg-cover bg-center cursor-pointer bg-origin-padding shadow-md`}
             >
               <div className="p-4 rounded-2xl rounded-b-none flex justify-between items-center">
                 <span className="whitespace-nowrap overflow-hidden text-ellipsis max-w-sm">
@@ -92,7 +92,7 @@ export default function ProjectInfoCard() {
           </Link>
         )
       )}
-      <hr className="text-slate-900 m-auto w-[20vw] mt-16 md:hidden" />
+      <hr className="dark:bg-white m-auto w-[20vw] mt-16 md:hidden" />
     </section>
   );
 }
