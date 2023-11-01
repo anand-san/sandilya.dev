@@ -1,3 +1,4 @@
+"use client";
 import { Instagram, Linkedin, Twitter, Github } from "lucide-react";
 import getConfig from "next/config";
 import Link from "next/link";
@@ -7,20 +8,49 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { useRef, useLayoutEffect } from "react";
+import { gsap } from "gsap";
 
 export const ProfileInfoCard = () => {
-  const {
-    publicRuntimeConfig: { SOCIAL_URLS },
-  } = getConfig();
+  const profileSection = useRef(null);
+
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      // use scoped selectors
+      gsap.from(".profile-image", {
+        x: 500,
+        duration: 1.5,
+        ease: "power1.out(1)",
+      });
+
+      gsap.from(".profile-description", {
+        x: -1000,
+        duration: 1.5,
+        ease: "power1.out(1.7)",
+      });
+    }, profileSection);
+
+    return () => ctx.revert();
+  }, []);
+
+  const SOCIAL_URLS = {
+    TWITTER: "https://twitter.com/anandsan_",
+    LINKEDIN: "https://www.linkedin.com/in/anandsandilya/",
+    INSTAGRAM: "https://www.instagram.com/anandsan_/",
+    GITHUB: "https://github.com/anand-san",
+  };
 
   return (
-    <section className="lg:container mx-auto pt-4 sm:pt-8 md:h-screen grid md:grid-cols-[2fr,1fr] md:snap-start md:snap-always items-center place-items-center">
+    <section
+      ref={profileSection}
+      className="profile-section lg:container mx-auto pt-4 sm:pt-8 md:h-screen grid md:grid-cols-[2fr,1fr] md:snap-start md:snap-always items-center place-items-center"
+    >
       <div
-        className={`bg-[url('/images/profile.png')] bg-left bg-cover bg-no-repeat md:order-2 border rounded-full md:rounded-xl m-4 scale-x-[-1] min-h-[200px] min-w-[200px] md:min-w-[284px] md:grid md:min-h-[384px] shadow-xl`}
+        className={`profile-image bg-[url('/images/profile.png')] bg-left bg-cover bg-no-repeat md:order-2 border rounded-full md:rounded-xl m-4 scale-x-[-1] min-h-[200px] min-w-[200px] md:min-w-[284px] md:grid md:min-h-[384px] shadow-xl`}
       ></div>
 
       <div
-        className={`md:order:1 flex flex-col p-8 pb-0 md:m-4 justify-between min-h-[384px]`}
+        className={`profile-description md:order:1 flex flex-col p-8 pb-0 md:m-4 justify-between min-h-[384px]`}
       >
         <h1 className="font-semibold text-center md:text-left text-2xl md:text-4xl">
           Hello, I&apos;m Anand, a Software Developer With 7 years of
