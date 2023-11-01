@@ -32,13 +32,6 @@ const PROJECTS: Project[] = [
     imagePath: "bg-[url('/images/projects/oddbeanscoffee.png')]",
   },
   {
-    order: 2,
-    title: "Sure Clickz",
-    description: "Online shop for https://xerobit.in",
-    url: "https://sureclickz.com/",
-    imagePath: "bg-[url('/images/projects/sureclickz.png')]",
-  },
-  {
     order: 5,
     title: "Quantilope GmbH",
     description: "",
@@ -63,15 +56,15 @@ const PROJECTS: Project[] = [
 
 export default function ProjectInfoCard() {
   return (
-    <section className=" mt-6 md:mt-0 md:snap-start md:snap-always grid md:gap-3 md:grid-cols-2 items-center mx-6">
-      <h1 className="text-center text-3xl my-8 uppercase tracking-wider">
+    <section className="md:h-screen mt-6 md:mt-0 md:snap-center md:snap-always grid sm:gap-3 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 items-center mx-6">
+      {/* <h1 className="text-center text-3xl my-8 uppercase tracking-wider">
         Projects
-      </h1>
+      </h1> */}
       {PROJECTS.sort(sortByOrder).map(
         ({ order, title, description, url, imagePath }) => (
           <Link key={order} href={url} target="_blank">
             <div
-              className={`transition-all border rounded-2xl mt-8  sm:m-y-2 h-72 md:h-[480px] ${imagePath} bg-no-repeat bg-cover bg-center cursor-pointer bg-origin-padding shadow-md`}
+              className={`transition-all border rounded-2xl mt-8  sm:m-y-2 h-64 md:h-[320px] ${imagePath} bg-no-repeat bg-cover bg-center cursor-pointer bg-origin-padding shadow-md`}
             >
               <div className="p-4 rounded-2xl rounded-b-none flex justify-between items-center">
                 <span className="whitespace-nowrap overflow-hidden text-ellipsis max-w-sm">
