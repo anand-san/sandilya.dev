@@ -46,7 +46,7 @@ export const ProfileInfoCard = () => {
       className="profile-section lg:container mx-auto pt-4 sm:pt-8 md:h-screen grid md:grid-cols-[2fr,1fr] md:snap-start md:snap-always items-center place-items-center"
     >
       <div
-        className={`profile-image bg-[url('/images/profile.png')] bg-left bg-cover bg-no-repeat md:order-2 border rounded-full md:rounded-xl m-4 scale-x-[-1] min-h-[200px] min-w-[200px] md:min-w-[384px] md:grid md:min-h-[384px] shadow-xl`}
+        className={`profile-image border-solid border-neutral-300	 dark:border-neutral-700 bg-[url('/images/profile.png')] bg-left bg-cover bg-no-repeat md:order-2 border rounded-full md:rounded-xl m-4 scale-x-[-1] min-h-[200px] min-w-[200px] md:min-w-[384px] md:grid md:min-h-[384px] shadow-xl`}
       ></div>
 
       <div
