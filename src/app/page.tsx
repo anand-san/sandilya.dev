@@ -1,8 +1,8 @@
 import { Menubar, MenubarMenu, MenubarTrigger } from '@/components/ui/menubar';
 import Image from 'next/image';
-import { ProfileInfoCard } from '@/components/profile-info-card/profile-info-card';
-import ProjectInfoCard from '@/components/project-info-card/project-info-card';
-import FooterContactCard from '@/components/footer-contact-card/footer-contact-card';
+import { ProfileInfoCard } from '@/components/profile-info-card';
+import ProjectInfoCard from '@/components/project-info-card';
+import FooterContactCard from '@/components/footer-contact-card';
 import { DarkModeToggle } from '@/components/DarkModeToggle';
 import { BookUser, GanttChartSquare, Mails } from 'lucide-react';
 import TestomonialsCard from '@/components/testomonials-card';

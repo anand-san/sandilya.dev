@@ -62,13 +62,6 @@ const PROJECTS: Project[] = [
     imagePath: "bg-[url('/images/projects/bluprint.png')]",
   },
   {
-    order: 1,
-    title: 'Odd Beans Coffee',
-    description: "Experiience the real taste of 'Good Coffee'",
-    url: 'https://www.oddbeanscoffee.com/',
-    imagePath: "bg-[url('/images/projects/oddbeanscoffee.png')]",
-  },
-  {
     order: 5,
     title: 'Quantilope GmbH',
     description: '',
@@ -81,12 +74,5 @@ const PROJECTS: Project[] = [
     description: '',
     url: 'https://mieterengel.de/',
     imagePath: "bg-[url('/images/projects/mieterengel.jpg')]",
-  },
-  {
-    order: 7,
-    title: 'Leadsquared',
-    description: '',
-    url: 'https://leadsquared.com/',
-    imagePath: "bg-[url('/images/projects/leadsquared.png')]",
   },
 ];
