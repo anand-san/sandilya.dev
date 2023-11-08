@@ -11,7 +11,7 @@ export default function ProjectInfoCard() {
         ({ order, title, description, url, imagePath }) => (
           <Link key={order} href={url} target='_blank'>
             <div
-              className={`sm:m-y-2 mt-8 h-64 rounded-2xl  border transition-all md:h-[320px] ${imagePath} cursor-pointer bg-cover bg-center bg-no-repeat bg-origin-padding hover:shadow-[inset_0_0_0_2000px_rgba(0,0,0,0.2)] dark:hover:shadow-[inset_0_0_0_2000px_rgba(255,255,255,0.5)]`}
+              className={`my-2 h-64 rounded-2xl  border transition-all md:h-[320px] ${imagePath} cursor-pointer bg-cover bg-center bg-no-repeat bg-origin-padding shadow-lg hover:shadow-[inset_0_0_0_2000px_rgba(0,0,0,0.2)] dark:hover:shadow-[inset_0_0_0_2000px_rgba(255,255,255,0.5)] `}
             >
               <div className='flex items-center justify-between rounded-2xl rounded-b-none p-4'>
                 <span className='max-w-sm overflow-hidden text-ellipsis whitespace-nowrap'>
@@ -32,7 +32,6 @@ export default function ProjectInfoCard() {
           </Link>
         )
       )}
-      <hr className='m-auto mt-16 w-[20vw] dark:bg-white md:hidden' />
     </section>
   );
 }

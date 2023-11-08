@@ -15,13 +15,13 @@ export default function FooterContactCard() {
   } = getConfig();
 
   return (
-    <section className='grid items-center pt-8 lg:container md:pt-0'>
+    <section className='grid items-center py-8 lg:container '>
       <div className={`m-4 flex flex-col justify-between p-8 text-center`}>
         <h1 className='text-2xl md:text-3xl'>Want to work together?</h1>
-        <p className='text-s font-extralight'>
+        <p className='text-base font-extralight'>
           Feel free to reach out for collaborations or just a friendly hello
         </p>
-        <span className='text-s font-light'>hello@anandks.com</span>
+        <span className='text-base font-light'>hello@anandks.com</span>
         <div className='mt-12 flex justify-center'>
           <Tooltip>
             <TooltipTrigger>
