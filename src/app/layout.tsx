@@ -17,11 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      lang='en'
-      className='md:snap-y md:snap-mandatory'
-      suppressHydrationWarning
-    >
+    <html lang='en' suppressHydrationWarning>
       <body className={cn(roboto.className, 'dark:text-slate-200')}>
         <ThemeProvider
           attribute='class'

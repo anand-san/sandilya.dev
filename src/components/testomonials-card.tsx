@@ -19,11 +19,8 @@ export default function TestomonialsCard() {
     useState<number>(1);
 
   return (
-    <section className='flex items-center justify-center pt-16 md:h-screen md:snap-start md:snap-always md:pt-0'>
-      <div className='h-[70vh] w-[80vw]'>
-        <h1 className='mb-16 text-center text-3xl uppercase tracking-wider md:mb-24'>
-          What people say
-        </h1>
+    <section className='flex items-center justify-center pt-16 lg:container md:pt-0'>
+      <div>
         <div className='grid grid-cols-2 justify-around gap-12'>
           <div>
             {TESTIMONIALS.map(({ order, name, image, designation }) => (

@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function ProjectInfoCard() {
   return (
-    <section className='mx-6 mt-6 grid items-center sm:grid-cols-2 sm:gap-3 md:mt-0 md:h-screen md:snap-center md:snap-always md:grid-cols-3 xl:grid-cols-4'>
+    <section className='mx-6 mt-6 grid items-center lg:container sm:grid-cols-2 sm:gap-3 md:mt-0'>
       {/* <h1 className="text-center text-3xl my-8 uppercase tracking-wider">
         Projects
       </h1> */}

@@ -43,7 +43,7 @@ export const ProfileInfoCard = () => {
   return (
     <section
       ref={profileSection}
-      className='profile-section mx-auto grid place-items-center items-center pt-4 lg:container sm:pt-8 md:h-screen md:snap-start md:snap-always md:grid-cols-[2fr,1fr]'
+      className='profile-section mx-auto grid place-items-center items-center pt-4 lg:container sm:pt-8 md:grid-cols-[2fr,1fr]'
     >
       <div
         className={`profile-image m-4 min-h-[200px]	 min-w-[200px] scale-x-[-1] rounded-full border border-solid border-neutral-300 bg-[url('/images/profile.png')] bg-cover bg-left bg-no-repeat shadow-xl dark:border-neutral-700 md:order-2 md:grid md:min-h-[384px] md:min-w-[384px] md:rounded-xl`}
