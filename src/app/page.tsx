@@ -10,14 +10,14 @@ import { TooltipProvider } from '@/components/ui/tooltip';
 
 export default function Home() {
   return (
-    <div className='bg-gradient-to-l from-orange-50 via-sky-50 to-fuchsia-50 dark:from-stone-900 dark:to-stone-900'>
-      <Menubar className='fixed bottom-0 left-0 z-10 w-screen justify-between  bg-gradient-to-l from-orange-50 via-sky-50 to-fuchsia-50 dark:from-stone-900 dark:to-stone-900 sm:top-0'>
+    <div className='bg-gradient-to-l from-orange-50 via-sky-50 to-fuchsia-50 dark:from-zinc-800 dark:to-stone-700'>
+      <Menubar className='fixed bottom-0 left-0 z-10 w-screen justify-between  bg-gradient-to-l from-orange-50 via-sky-50 to-fuchsia-50 dark:from-zinc-800 dark:to-stone-700 sm:top-0'>
         <Image
           src='https://imgur.com/NWnsFzH.png'
           alt='logo'
           width={32}
           height={20}
-          className='pointer-events-none'
+          className='pointer-events-none dark:invert'
         />
         <div className='flex'>
           <MenubarMenu>

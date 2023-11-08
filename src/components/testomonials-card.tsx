@@ -14,9 +14,6 @@ import { Linkedin } from 'lucide-react';
 import Link from 'next/link';
 
 export default function TestomonialsCard() {
-  const [activeTestimonialIndex, setActiveTestimonialIndex] =
-    useState<number>(1);
-
   return (
     <section className='mx-6 grid justify-around lg:container sm:grid-cols-2 sm:gap-3 md:pt-4'>
       {TESTIMONIALS.map(
@@ -31,8 +28,7 @@ export default function TestomonialsCard() {
         }) => (
           <div
             key={order}
-            className='my-2 flex h-64 flex-col justify-around rounded-2xl border bg-gradient-to-br from-orange-50 via-sky-50 to-fuchsia-50 px-4 shadow-lg transition-all dark:from-stone-900 dark:to-stone-900 md:h-[320px]'
-            onClick={() => setActiveTestimonialIndex(order)}
+            className='my-2 flex h-64 flex-col justify-around rounded-2xl border bg-gradient-to-br from-orange-50 via-sky-50 to-fuchsia-50 px-4 shadow-lg transition-all dark:from-stone-700 dark:to-zinc-800 md:h-[320px]'
           >
             <div className='flex items-center justify-around'>
               <Image
@@ -70,7 +66,7 @@ export default function TestomonialsCard() {
                 </TooltipContent>
               </Tooltip>
             </div>
-            <p className='text-center text-sm text-zinc-900 md:text-base md:font-light md:leading-6'>
+            <p className='text-center text-sm text-zinc-900 dark:text-neutral-100 md:text-base md:font-light md:leading-6'>
               {message}
             </p>
           </div>
@@ -93,7 +89,7 @@ interface TestomonialProps {
 const TESTIMONIALS: TestomonialProps[] = [
   {
     name: 'Saurav Mishra',
-    organisation: 'Leadsquared',
+    organisation: 'Fortive',
     image: SauravImage,
     designation: 'Senior Engineering Manager',
     shortMessage: 'A reliable and highly capable professional',
