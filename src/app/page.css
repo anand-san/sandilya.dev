@@ -1,0 +1,42 @@
+.base-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2px;
+  grid-template-areas:
+    'profile-image profile-description profile-description profile-description'
+    'profile-image profile-description profile-description profile-description'
+    'profile-image collaborations-info collaborations-info collaborations-info'
+    'profile-image collaborations-links collaborations-links collaborations-links'
+    'spotify-embed spotify-embed spotify-embed spotify-embed';
+}
+
+@media (max-width: 640px) {
+  .base-page {
+    grid-template-areas:
+      'profile-image profile-image profile-image profile-image'
+      'profile-description profile-description profile-description profile-description'
+      'collaborations-info collaborations-info collaborations-info collaborations-info'
+      'collaborations-links collaborations-links collaborations-links collaborations-links'
+      'spotify-embed spotify-embed spotify-embed spotify-embed';
+  }
+}
+
+.profile-image {
+  grid-area: profile-image;
+}
+
+.profile-description {
+  grid-area: profile-description;
+}
+
+.collaborations-info {
+  grid-area: collaborations-info;
+}
+
+.collaborations-links {
+  grid-area: collaborations-links;
+}
+
+.spotify-embed {
+  grid-area: spotify-embed;
+}
