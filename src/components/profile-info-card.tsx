@@ -38,7 +38,7 @@ export const ProfileInfoCard = () => {
     src: isMobile ? '/images/profile-mobile.png' : '/images/profile.png',
 
     width: isMobile ? 450 : 165,
-    height: isMobile ? 450 : 375,
+    height: isMobile ? 450 : 300,
   };
 
   return (
@@ -46,7 +46,7 @@ export const ProfileInfoCard = () => {
       {windowWidth ? (
         <Image
           alt='profile-picture'
-          className='profile-image pointer-events-none mx-2 rounded-lg border border-solid border-neutral-300 shadow-xl dark:border-neutral-700'
+          className='profile-image pointer-events-none rounded-lg border border-solid border-neutral-300 shadow-xl dark:border-neutral-700'
           {...profileImageProps}
         />
       ) : (
@@ -72,7 +72,7 @@ export const ProfileInfoCard = () => {
           <span className='text-base font-light'>anand@sandilya.dev</span>
         </p>
       </div>
-      <div className='collaborations-links mb-4 mt-8 flex justify-center sm:mt-0'>
+      <div className='collaborations-links mb-4 mt-8 flex justify-center sm:mt-4'>
         <Tooltip>
           <TooltipTrigger>
             <Link href={SOCIAL_URLS.LINKEDIN} target='_blank'>

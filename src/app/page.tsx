@@ -6,7 +6,7 @@ import './page.css';
 
 export default function Home() {
   return (
-    <div className='base-page'>
+    <div className='base-page m-2'>
       <ProfileInfoCard />
 
       {/* <ProjectInfoCard /> */}
