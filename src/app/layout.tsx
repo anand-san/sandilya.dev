@@ -4,7 +4,7 @@ import { ThemeProvider } from '@/components/providers/theme-provider';
 import './globals.css';
 import { cn } from '@/lib/utils';
 import { Menubar, MenubarMenu, MenubarTrigger } from '@/components/ui/menubar';
-import { DarkModeToggle } from '@/components/DarkModeToggle';
+import { DarkModeToggle } from '@/components/dark-mode-switch';
 import { GanttChartSquare, Mails, BookUser } from 'lucide-react';
 import Image from 'next/image';
 import { TooltipProvider } from '@/components/ui/tooltip';
