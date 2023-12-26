@@ -1,25 +1,123 @@
 'use client';
+
 import Image from 'next/image';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from '@/components/ui/tooltip';
+import { Linkedin, Twitter, Github } from 'lucide-react';
+import { SOCIAL_URLS } from '../../utils/constants';
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 export const ProfileInfoCard = () => {
-  return (
-    <section className='profile-section mx-2 grid place-items-center items-center p-6 md:grid-cols-[1fr,2fr]'>
-      <Image
-        src='/images/profile.png'
-        alt='profile-picture'
-        width={180}
-        height={180}
-        className='pointer-events-none rounded-full border border-solid border-neutral-300 shadow-xl dark:border-neutral-700'
-      />
+  const [windowWidth, setWindowWidth] = useState(0);
 
-      <div className={`profile-description flex flex-col items-center md:m-4`}>
-        <h1 className='text-center text-2xl font-semibold md:text-left md:text-4xl'>
-          ANAND SANDILYA
+  const handleWindowResize = (innerWidth: number) => {
+    setWindowWidth(innerWidth);
+  };
+
+  useEffect(() => {
+    handleWindowResize(window.innerWidth);
+
+    window.addEventListener('resize', () =>
+      handleWindowResize(window.innerWidth)
+    );
+
+    return () => {
+      window.removeEventListener('resize', () =>
+        handleWindowResize(window.innerWidth)
+      );
+    };
+  }, []);
+
+  const isMobile = windowWidth && windowWidth <= 640;
+
+  const profileImageProps = {
+    src: isMobile ? '/images/profile-mobile.png' : '/images/profile.png',
+
+    width: isMobile ? 450 : 165,
+    height: isMobile ? 450 : 375,
+  };
+
+  return (
+    <>
+      {windowWidth ? (
+        <Image
+          alt='profile-picture'
+          className='profile-image pointer-events-none mx-2 rounded-lg border border-solid border-neutral-300 shadow-xl dark:border-neutral-700'
+          {...profileImageProps}
+        />
+      ) : (
+        <> </>
+      )}
+
+      <div
+        className={`profile-description flex h-[150px] flex-col items-center justify-center sm:h-[180px]`}
+      >
+        <h1 className='text-center text-3xl font-semibold sm:text-left sm:text-4xl'>
+          Hi, I&apos;m Anand
         </h1>
-        <p className='text-l mt-2 text-center font-normal md:text-left md:text-xl'>
+        <p className='mt-2 text-center text-xl font-normal sm:text-left sm:text-xl'>
           I build full stack products that people love
         </p>
       </div>
-    </section>
+      <div
+        className={`collaborations-info flex flex-col justify-between text-center`}
+      >
+        <p className='text-base font-extralight'>
+          Reach out for collaborations or just a friendly hello
+          <br />
+          <span className='text-base font-light'>anand@sandilya.dev</span>
+        </p>
+      </div>
+      <div className='collaborations-links mb-4 mt-8 flex justify-center sm:mt-0'>
+        <Tooltip>
+          <TooltipTrigger>
+            <Link href={SOCIAL_URLS.LINKEDIN} target='_blank'>
+              <Linkedin
+                strokeWidth={1.25}
+                size={36}
+                className='ml-4 cursor-pointer text-[#0072b1] hover:fill-[#0072b1]'
+              />
+            </Link>
+          </TooltipTrigger>
+          <TooltipContent side='bottom'>
+            <p>Linkedin</p>
+          </TooltipContent>
+        </Tooltip>
+
+        <Tooltip>
+          <TooltipTrigger>
+            <Link href={SOCIAL_URLS.TWITTER} target='_blank'>
+              <Twitter
+                strokeWidth={1.25}
+                size={36}
+                className='ml-4 cursor-pointer text-[#1DA1F2] hover:fill-[#1DA1F2]'
+              />
+            </Link>
+          </TooltipTrigger>
+          <TooltipContent side='bottom'>
+            <p>Twitter/ X</p>
+          </TooltipContent>
+        </Tooltip>
+
+        <Tooltip>
+          <TooltipTrigger>
+            <Link href={SOCIAL_URLS.GITHUB} target='_blank'>
+              <Github
+                strokeWidth={1.25}
+                size={36}
+                className='ml-4 cursor-pointer text-[#171515] hover:fill-[#171515] dark:text-[#fff] dark:hover:fill-[#fff]'
+              />
+            </Link>
+          </TooltipTrigger>
+          <TooltipContent side='bottom'>
+            <p>Github</p>
+          </TooltipContent>
+        </Tooltip>
+      </div>
+    </>
   );
 };
