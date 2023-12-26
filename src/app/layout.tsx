@@ -26,7 +26,7 @@ export default function RootLayout({
       <body className='flex w-screen flex-col items-center dark:bg-slate-950'>
         <ThemeProvider
           attribute='class'
-          defaultTheme='system'
+          defaultTheme='dark'
           enableSystem
           disableTransitionOnChange
           storageKey='sandilya-theme'
