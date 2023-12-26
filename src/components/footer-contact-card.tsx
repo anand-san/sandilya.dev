@@ -21,23 +21,8 @@ export default function FooterContactCard() {
         <p className='text-base font-extralight'>
           Feel free to reach out for collaborations or just a friendly hello
         </p>
-        <span className='text-base font-light'>hello@anandks.com</span>
+        <span className='text-base font-light'>anand@sandilya.dev</span>
         <div className='mt-12 flex justify-center'>
-          <Tooltip>
-            <TooltipTrigger>
-              <Link href={SOCIAL_URLS.INSTAGRAM} target='_blank'>
-                <Instagram
-                  strokeWidth={1.25}
-                  size={36}
-                  className='ml-4 cursor-pointer text-[#d62976] hover:fill-[#f7d6bc]'
-                />
-              </Link>
-            </TooltipTrigger>
-            <TooltipContent side='bottom'>
-              <p>Instagram</p>
-            </TooltipContent>
-          </Tooltip>
-
           <Tooltip>
             <TooltipTrigger>
               <Link href={SOCIAL_URLS.LINKEDIN} target='_blank'>
