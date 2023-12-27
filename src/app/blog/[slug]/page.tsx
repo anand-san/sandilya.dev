@@ -10,7 +10,7 @@ import Link from 'next/link';
 import { ChevronLeft } from 'lucide-react';
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { formatDate, getFullDate } from '../../../../utils/format-date';
+import { formatDate, getFullDate } from '../../../utils/format-date';
 
 interface BlogProps {
   params: Record<string, string | string[]> | null;

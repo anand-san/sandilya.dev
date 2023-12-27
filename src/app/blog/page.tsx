@@ -5,7 +5,7 @@ import { getViewsCount } from '@/db/queries';
 import { Metadata, getBlogPosts } from '@/db/blog';
 import Image from 'next/image';
 import { ChevronRightIcon } from 'lucide-react';
-import { getFullDate } from '../../../utils/format-date';
+import { getFullDate } from '../../utils/format-date';
 
 export const metadata = {
   title: 'Blog',
