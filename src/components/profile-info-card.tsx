@@ -34,8 +34,12 @@ export const ProfileInfoCard = () => {
 
   const isMobile = windowWidth && windowWidth <= 640;
 
+  const profileImageMobile = 'https://i.imgur.com/QxkSWfe.png';
+
+  const profileImageDesktop = 'https://i.imgur.com/sy3Hd59.png';
+
   const profileImageProps = {
-    src: isMobile ? '/images/profile-mobile.png' : '/images/profile.png',
+    src: isMobile ? profileImageMobile : profileImageDesktop,
 
     width: isMobile ? 450 : 165,
     height: isMobile ? 450 : 300,

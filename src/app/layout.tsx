@@ -46,7 +46,7 @@ export default function RootLayout({
 const NavBar = () => (
   <Menubar className='mx-2 my-2 justify-between dark:bg-slate-950'>
     <Image
-      src='https://imgur.com/NWnsFzH.png'
+      src='https://i.imgur.com/NWnsFzH.png'
       alt='logo'
       width={28}
       height={18}

@@ -4,17 +4,17 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "imgur.com",
+        protocol: 'https',
+        hostname: 'i.imgur.com',
       },
     ],
   },
   publicRuntimeConfig: {
     SOCIAL_URLS: {
-      TWITTER: "https://twitter.com/anandsan_",
-      LINKEDIN: "https://www.linkedin.com/in/anandsandilya/",
-      INSTAGRAM: "https://www.instagram.com/anandsan_/",
-      GITHUB: "https://github.com/anand-san",
+      TWITTER: 'https://twitter.com/anandsan_',
+      LINKEDIN: 'https://www.linkedin.com/in/anandsandilya/',
+      INSTAGRAM: 'https://www.instagram.com/anandsan_/',
+      GITHUB: 'https://github.com/anand-san',
     },
   },
 };
