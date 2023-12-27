@@ -105,7 +105,7 @@ export default function Blog({ params }: BlogProps) {
         <CustomMDX source={post.content} />
       </article>
 
-      <hr className='mt-12' />
+      <hr className='m-auto mb-8 mt-16 w-24' />
 
       <div className='py-6 lg:py-10'>
         <Link href='/blog' className={cn(buttonVariants({ variant: 'ghost' }))}>

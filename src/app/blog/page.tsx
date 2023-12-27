@@ -34,7 +34,7 @@ export default function BlogPage() {
           </p>
         </div>
       </div>
-      <hr className='my-10' />
+      <hr className='m-auto my-10 w-24' />
       {allBlogs?.length ? (
         <div className='flex flex-col gap-10'>
           {allBlogs.map((post, index) => (

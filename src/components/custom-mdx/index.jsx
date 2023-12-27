@@ -51,9 +51,9 @@ function RoundedImage(props) {
 
 function Callout(props) {
   return (
-    <div className='mb-8 flex items-center rounded border border-neutral-200 bg-neutral-50 p-1 px-4 py-3 text-sm text-neutral-900 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100'>
+    <div className='mb-8 flex gap-2 rounded border border-neutral-200 bg-neutral-50 px-4 py-3 text-sm text-neutral-900 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100'>
       <div className='mr-4 flex w-4 items-center'>{props.emoji}</div>
-      <div className='callout w-full'>{props.children}</div>
+      <div className='callout'>{props.children}</div>
     </div>
   );
 }
