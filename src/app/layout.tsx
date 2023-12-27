@@ -1,3 +1,4 @@
+import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { ThemeProvider } from '@/components/providers/theme-provider';
@@ -8,6 +9,7 @@ import { DarkModeToggle } from '@/components/dark-mode-switch';
 import { GanttChartSquare, Mails, BookUser } from 'lucide-react';
 import Image from 'next/image';
 import { TooltipProvider } from '@/components/ui/tooltip';
+import Link from 'next/link';
 
 const inter = Inter({ subsets: ['greek'], weight: '300' });
 
@@ -45,20 +47,24 @@ export default function RootLayout({
 
 const NavBar = () => (
   <Menubar className='mx-2 my-2 justify-between dark:bg-slate-950'>
-    <Image
-      src='https://i.imgur.com/NWnsFzH.png'
-      alt='logo'
-      width={28}
-      height={18}
-      className='pointer-events-none dark:invert'
-    />
+    <Link href='/'>
+      <Image
+        src='https://i.imgur.com/NWnsFzH.png'
+        alt='logo'
+        width={28}
+        height={18}
+        className='pointer-events-none dark:invert'
+      />
+    </Link>
     <div className='flex'>
-      <MenubarMenu>
-        <MenubarTrigger>
-          <p className='hidden sm:block'>BLOG</p>
-          <GanttChartSquare className='block sm:hidden' />
-        </MenubarTrigger>
-      </MenubarMenu>
+      <Link href='/blog'>
+        <MenubarMenu>
+          <MenubarTrigger>
+            <p className='hidden sm:block'>BLOG</p>
+            <GanttChartSquare className='block sm:hidden' />
+          </MenubarTrigger>
+        </MenubarMenu>
+      </Link>
       <MenubarMenu>
         <MenubarTrigger>
           <p className='hidden sm:block'>ABOUT</p>
