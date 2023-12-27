@@ -25,7 +25,7 @@ export default function BlogPage() {
 
   // TODO: Add a tab bar navigation based on tags
   return (
-    <section className='container max-w-4xl py-6 lg:py-10'>
+    <section className='container py-6 lg:py-10'>
       <div className='flex flex-col'>
         <div className='flex-1 space-y-4'>
           <p className='text-lg text-muted-foreground sm:text-xl'>
