@@ -3,9 +3,17 @@ import Image from 'next/image';
 import { MDXRemote, MDXRemoteProps } from 'next-mdx-remote/rsc';
 import { TweetComponent } from './tweet';
 import { highlight } from 'sugar-high';
-import React from 'react';
+import React, { AnchorHTMLAttributes } from 'react';
+import { MDXProvider } from '@mdx-js/react';
 
-function Table({ data }) {
+type TableProps = {
+  data: {
+    headers: string[];
+    rows: string[][];
+  };
+};
+
+function Table({ data }: TableProps) {
   let headers = data.headers.map((header, index) => (
     <th key={index}>{header}</th>
   ));
@@ -27,10 +35,10 @@ function Table({ data }) {
   );
 }
 
-function CustomLink(props) {
+function CustomLink(props: AnchorHTMLAttributes<HTMLAnchorElement>) {
   let href = props.href;
 
-  if (href.startsWith('/')) {
+  if (href?.startsWith('/')) {
     return (
       <Link href={href} {...props}>
         {props.children}
@@ -38,18 +46,19 @@ function CustomLink(props) {
     );
   }
 
-  if (href.startsWith('#')) {
+  if (href?.startsWith('#')) {
     return <a {...props} />;
   }
 
   return <a target='_blank' rel='noopener noreferrer' {...props} />;
 }
 
-function RoundedImage(props) {
+// TODO: Fix this type
+function RoundedImage(props: any) {
   return <Image alt={props.alt} className='rounded-lg' {...props} />;
 }
 
-function Callout(props) {
+function Callout(props: { emoji: React.ReactNode; children: React.ReactNode }) {
   return (
     <div className='mb-8 flex gap-2 rounded border border-neutral-200 bg-neutral-50 px-4 py-3 text-sm text-neutral-900 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100'>
       <div className='mr-4 flex w-4 items-center'>{props.emoji}</div>
@@ -58,7 +67,7 @@ function Callout(props) {
   );
 }
 
-function ProsCard({ title, pros }) {
+function ProsCard({ title, pros }: { title: string; pros: string[] }) {
   return (
     <div className='my-4 w-full rounded-xl border border-emerald-200 bg-neutral-50 p-6 dark:border-emerald-900 dark:bg-neutral-900'>
       <span>{`You might use ${title} if...`}</span>
@@ -87,7 +96,7 @@ function ProsCard({ title, pros }) {
   );
 }
 
-function ConsCard({ title, cons }) {
+function ConsCard({ title, cons }: { title: string; cons: string[] }) {
   return (
     <div className='my-6 w-full rounded-xl border border-red-200 bg-neutral-50 p-6 dark:border-red-900 dark:bg-neutral-900'>
       <span>{`You might not use ${title} if...`}</span>
@@ -112,12 +121,13 @@ function ConsCard({ title, cons }) {
   );
 }
 
-function Code({ children, ...props }) {
+//TODO: Fix this type
+function Code({ children }: { children: string }, ...props: any) {
   let codeHTML = highlight(children);
   return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />;
 }
 
-function slugify(str) {
+function slugify(str: JSX.Element) {
   return str
     .toString()
     .toLowerCase()
@@ -128,8 +138,8 @@ function slugify(str) {
     .replace(/\-\-+/g, '-'); // Replace multiple - with single -
 }
 
-function createHeading(level) {
-  const HeadingComponent = ({ children }) => {
+function createHeading(level: number) {
+  const HeadingComponent = ({ children }: { children: JSX.Element }) => {
     let slug = slugify(children);
     return React.createElement(
       `h${level}`,
@@ -148,7 +158,9 @@ function createHeading(level) {
   return HeadingComponent;
 }
 
-let components = {
+// TODO: Fix this type
+// let components: React.ComponentProps<typeof MDXProvider>['components'] = {
+let components: any = {
   h1: createHeading(1),
   h2: createHeading(2),
   h3: createHeading(3),
@@ -165,7 +177,7 @@ let components = {
   Table,
 };
 
-export function CustomMDX(props) {
+export function CustomMDX(props: MDXRemoteProps) {
   return (
     <MDXRemote
       {...props}
