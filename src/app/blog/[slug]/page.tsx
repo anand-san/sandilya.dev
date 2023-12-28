@@ -58,6 +58,14 @@ export async function generateMetadata({
   };
 }
 
+export async function generateStaticParams() {
+  let allBlogs = getBlogPosts();
+
+  return allBlogs.map((post) => ({
+    slug: post.slug,
+  }));
+}
+
 export default function Blog({ params }: BlogProps) {
   let post = getBlogPosts().find((post) => post.slug === params?.slug);
 

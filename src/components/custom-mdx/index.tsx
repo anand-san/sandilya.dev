@@ -3,8 +3,7 @@ import Image from 'next/image';
 import { MDXRemote, MDXRemoteProps } from 'next-mdx-remote/rsc';
 import { TweetComponent } from './tweet';
 import { highlight } from 'sugar-high';
-import React, { AnchorHTMLAttributes } from 'react';
-import { MDXProvider } from '@mdx-js/react';
+import React, { AnchorHTMLAttributes, lazy } from 'react';
 
 type TableProps = {
   data: {
