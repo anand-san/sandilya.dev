@@ -74,7 +74,7 @@ export default function Blog({ params }: BlogProps) {
   }
 
   return (
-    <section>
+    <section className='grid w-full justify-center'>
       <script
         type='application/ld+json'
         suppressHydrationWarning

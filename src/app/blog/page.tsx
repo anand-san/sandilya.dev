@@ -88,8 +88,8 @@ const BlogCard = (props: BlogPostCardProps) => {
               <Views slug={slug} />
             </Suspense>
           </span>
-          &middot;{' '}
-          <span className='text-sm text-neutral-600 hover:underline dark:text-neutral-400'>
+          <span className='hidden sm:block'>&middot; </span>
+          <span className='hidden text-sm text-neutral-600 hover:underline dark:text-neutral-400 sm:block'>
             Read more
           </span>
           <ChevronRightIcon className='mt-[2px] hidden h-4 w-4 text-neutral-600 dark:text-neutral-400 sm:block' />
