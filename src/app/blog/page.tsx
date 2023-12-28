@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import { Suspense } from 'react';
 import ViewCounter from './view-counter';
-import { getViewsCount } from '@/db/queries';
-import { Metadata, getBlogPosts } from '@/db/blog';
+import { getViewsCount } from '@/lib/db/blog';
+import { Metadata, getBlogPosts } from '@/lib/blog-mdx-utils';
 import Image from 'next/image';
 import { ChevronRightIcon } from 'lucide-react';
 import { getFullDate } from '../../utils/format-date';
