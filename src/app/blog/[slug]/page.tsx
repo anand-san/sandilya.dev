@@ -10,6 +10,7 @@ import { ChevronLeft } from 'lucide-react';
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { formatDate, getFullDate } from '../../../utils/format-date';
+import { Skeleton } from '@/components/ui/skeleton';
 
 interface BlogProps {
   params: Record<string, string | string[]> | null;
@@ -96,7 +97,7 @@ export default function Blog({ params }: BlogProps) {
           {getFullDate(post.metadata.publishedAt)} (
           {formatDate(post.metadata.publishedAt)})
         </p>
-        <Suspense fallback={<p className='h-5' />}>
+        <Suspense fallback={<Skeleton className='h-4 w-[60px]' />}>
           <Views slug={post.slug} />
         </Suspense>
       </div>

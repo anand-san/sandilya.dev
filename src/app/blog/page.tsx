@@ -6,6 +6,7 @@ import { Metadata, getBlogPosts } from '@/lib/blog-mdx-utils';
 import Image from 'next/image';
 import { ChevronRightIcon } from 'lucide-react';
 import { getFullDate } from '../../utils/format-date';
+import { Skeleton } from '@/components/ui/skeleton';
 
 export const metadata = {
   title: 'Blog',
@@ -83,7 +84,7 @@ const BlogCard = (props: BlogPostCardProps) => {
           </span>
           <span className='text-sm'>
             &middot;{' '}
-            <Suspense fallback={<p className='h-6' />}>
+            <Suspense fallback={<Skeleton className='h-4 w-[60px]' />}>
               <Views slug={slug} />
             </Suspense>
           </span>
