@@ -1,19 +1,46 @@
+import '@/styles/globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { ThemeProvider } from '@/components/providers/theme-provider';
-import './globals.css';
 import { cn } from '@/lib/utils';
-import { Menubar, MenubarMenu, MenubarTrigger } from '@/components/ui/menubar';
-import { DarkModeToggle } from '@/components/dark-mode-switch';
-import { GanttChartSquare, Mails, BookUser } from 'lucide-react';
-import Image from 'next/image';
 import { TooltipProvider } from '@/components/ui/tooltip';
-
+import { TopNavBar } from '@/components/navbar';
 const inter = Inter({ subsets: ['greek'], weight: '300' });
 
 export const metadata: Metadata = {
-  title: 'Anand Sandilya',
-  description: 'Some random web engineer on the internet',
+  metadataBase: new URL('https://sandilya.dev'),
+  title: {
+    default: 'Anand Sandilya',
+    template: '%s | Anand Sandilya',
+  },
+  description: 'Full stack engineer, Weekend freelancer',
+  openGraph: {
+    title: 'Anand Sandilya',
+    description: 'Full stack engineer, Weekend freelancer',
+    url: 'https://sandilya.dev',
+    siteName: 'Anand Sandilya',
+    locale: 'en_US',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  twitter: {
+    title: 'Anand Sandilya',
+    card: 'summary_large_image',
+  },
+  verification: {
+    // google: 'eZSdmzAXlLkKhNJzfgwDqWORghxnJ8qR9_CHdAh5-xw',
+    // yandex: '14d2e73487fa6c71',
+  },
 };
 
 export default function RootLayout({
@@ -33,7 +60,7 @@ export default function RootLayout({
         >
           <main className='max-w-4xl antialiased'>
             <TooltipProvider delayDuration={100} skipDelayDuration={100}>
-              <NavBar />
+              <TopNavBar />
               <div className='mt-2'>{children}</div>
             </TooltipProvider>
           </main>
@@ -42,30 +69,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-const NavBar = () => (
-  <Menubar className='mx-2 my-2 justify-between dark:bg-slate-950'>
-    <Image
-      src='https://i.imgur.com/NWnsFzH.png'
-      alt='logo'
-      width={28}
-      height={18}
-      className='pointer-events-none dark:invert'
-    />
-    <div className='flex'>
-      <MenubarMenu>
-        <MenubarTrigger>
-          <p className='hidden sm:block'>BLOG</p>
-          <GanttChartSquare className='block sm:hidden' />
-        </MenubarTrigger>
-      </MenubarMenu>
-      <MenubarMenu>
-        <MenubarTrigger>
-          <p className='hidden sm:block'>ABOUT</p>
-          <Mails className='block sm:hidden' />
-        </MenubarTrigger>
-      </MenubarMenu>
-    </div>
-    <DarkModeToggle />
-  </Menubar>
-);

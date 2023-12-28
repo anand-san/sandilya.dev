@@ -7,7 +7,7 @@ import {
   TooltipTrigger,
 } from '@/components/ui/tooltip';
 import { Linkedin, Twitter, Github } from 'lucide-react';
-import { SOCIAL_URLS } from '../../utils/constants';
+import { SOCIAL_URLS } from '../utils/constants';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
