@@ -1,36 +1,15 @@
 'use server';
 
-// import { sql } from '@vercel/postgres';
-// import { unstable_noStore as noStore } from 'next/cache';
-
-export async function getBlogViews() {
-  return [];
-  //   if (!process.env.POSTGRES_URL) {
-  //     return [];
-  //   }
-
-  //   noStore();
-  //   let data = await sql`
-  //     SELECT count
-  //     FROM views
-  //   `;
-
-  //   return data.rows.reduce((acc, curr) => acc + Number(curr.count), 0);
-}
+import { unstable_noStore as noStore } from 'next/cache';
+import { db } from '@/lib/db';
 
 export async function getViewsCount() {
-  return [];
-  //   if (!process.env.POSTGRES_URL) {
-  //     return [];
-  //   }
+  if (!process.env.DATABASE_URL) {
+    return [];
+  }
 
-  //   noStore();
-  //   let data = await sql`
-  //     SELECT slug, count
-  //     FROM views
-  //   `;
-
-  //   return data.rows as { slug: string; count: number }[];
+  noStore();
+  return await db.postViews.findMany();
 }
 
 export async function getGuestbookEntries() {

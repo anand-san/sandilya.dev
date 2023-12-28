@@ -5,12 +5,12 @@ export default function ViewCounter({
   slug: string;
   allViews: {
     slug: string;
-    count: number;
+    views: number;
   }[];
   trackView?: boolean;
 }) {
   const viewsForSlug = allViews && allViews.find((view) => view.slug === slug);
-  const number = new Number(viewsForSlug?.count || 0);
+  const number = new Number(viewsForSlug?.views || 0);
 
   return (
     <span className='text-neutral-600 dark:text-neutral-400'>

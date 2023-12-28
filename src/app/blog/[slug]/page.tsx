@@ -5,7 +5,7 @@ import { CustomMDX } from '@/components/custom-mdx';
 import { getViewsCount } from '@/db/queries';
 import { getBlogPosts } from '@/db/blog';
 import ViewCounter from '../view-counter';
-import { increment } from '@/db/actions';
+import { incrementPostView } from '@/db/actions';
 import Link from 'next/link';
 import { ChevronLeft } from 'lucide-react';
 import { buttonVariants } from '@/components/ui/button';
@@ -117,7 +117,7 @@ export default function Blog({ params }: BlogProps) {
   );
 }
 
-let incrementViews = cache(increment);
+let incrementViews = cache(incrementPostView);
 
 async function Views({ slug }: { slug: string }) {
   let views = await getViewsCount();

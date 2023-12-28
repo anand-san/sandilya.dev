@@ -1,19 +1,27 @@
 'use server';
+import { db } from '@/lib/db';
 
 // import { auth } from 'app/auth';
 // import { type Session } from 'next-auth';
 // import { sql } from '@vercel/postgres';
-// import { revalidatePath, unstable_noStore as noStore } from 'next/cache';
+import { revalidatePath, unstable_noStore as noStore } from 'next/cache';
 
-export async function increment(slug: string) {
-  return slug;
-  //   noStore();
-  //   await sql`
-  //     INSERT INTO views (slug, count)
-  //     VALUES (${slug}, 1)
-  //     ON CONFLICT (slug)
-  //     DO UPDATE SET count = views.count + 1
-  //   `;
+export async function incrementPostView(slug: string) {
+  noStore();
+  await db.postViews.upsert({
+    where: {
+      slug: slug,
+    },
+    create: {
+      slug: slug,
+      views: 1,
+    },
+    update: {
+      views: {
+        increment: process.env.NODE_ENV === 'production' ? 1 : 0,
+      },
+    },
+  });
 }
 
 // async function getSession(): Promise<Session> {
