@@ -41,12 +41,13 @@ export const TopNavBar = () => {
           </Link>
         )}
 
-        <MenubarMenu>
-          <MenubarTrigger>
-            <p className='hidden sm:block'>ABOUT</p>
-            <Mails className='block sm:hidden' />
-          </MenubarTrigger>
-        </MenubarMenu>
+        <Link href='/work'>
+          <MenubarMenu>
+            <MenubarTrigger>
+              <ClipboardList />
+            </MenubarTrigger>
+          </MenubarMenu>
+        </Link>
       </div>
       <DarkModeToggle />
     </Menubar>

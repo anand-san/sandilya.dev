@@ -7,6 +7,8 @@
     'profile-image profile-description profile-description profile-description'
     'profile-image collaborations-info collaborations-info collaborations-info'
     'profile-image collaborations-links collaborations-links collaborations-links'
+    'projects-info projects-info projects-info projects-info'
+    'projects-info projects-info projects-info projects-info'
     'spotify-embed spotify-embed spotify-embed spotify-embed';
 }
 
@@ -17,6 +19,8 @@
       'profile-description profile-description profile-description profile-description'
       'collaborations-info collaborations-info collaborations-info collaborations-info'
       'collaborations-links collaborations-links collaborations-links collaborations-links'
+      'projects-info projects-info projects-info projects-info'
+      'projects-info projects-info projects-info projects-info'
       'spotify-embed spotify-embed spotify-embed spotify-embed';
   }
 }
@@ -39,4 +43,8 @@
 
 .spotify-embed {
   grid-area: spotify-embed;
+}
+
+.projects-info {
+  grid-area: projects-info;
 }
