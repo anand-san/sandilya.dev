@@ -14,7 +14,7 @@ export const metadata = {
     'Read my case studies, thoughts on software development, design, and more.',
 };
 
-export default function BlogPage() {
+export default function Page() {
   let allBlogs = getBlogPosts();
 
   allBlogs.sort((a, b) => {
@@ -24,7 +24,6 @@ export default function BlogPage() {
     return 1;
   });
 
-  // TODO: Add a tab bar navigation based on tags
   return (
     <section className='container py-6 lg:py-10'>
       <div className='flex flex-col'>
@@ -36,20 +35,36 @@ export default function BlogPage() {
         </div>
       </div>
       <hr className='m-auto my-10 w-24' />
-      {allBlogs?.length ? (
-        <div className='flex flex-col gap-10'>
-          {allBlogs.map((post, index) => (
-            <Link href={`/blog/${post.slug}`} key={post.slug}>
-              <BlogCard post={post} index={index} />
-              {/* // TODO: Add a divider */}
-              {/* <hr className='mt-10' /> */}
-            </Link>
-          ))}
-        </div>
-      ) : (
-        <p>No posts published.</p>
-      )}
+      <Suspense fallback={<BlogCardSkeleton />}>
+        <BlogPage allBlogs={allBlogs} />
+      </Suspense>
     </section>
+  );
+}
+
+interface BlogPageProps {
+  allBlogs: {
+    metadata: Metadata;
+    slug: string;
+    tweetIds: (string | never[])[] | undefined;
+    content: string;
+  }[];
+}
+
+export function BlogPage({ allBlogs }: BlogPageProps) {
+  // TODO: Add a tab bar navigation based on tags
+  return allBlogs?.length ? (
+    <div className='flex flex-col gap-10'>
+      {allBlogs.map((post, index) => (
+        <Link href={`/blog/${post.slug}`} key={post.slug}>
+          <BlogCard post={post} index={index} />
+          {/* // TODO: Add a divider */}
+          {/* <hr className='mt-10' /> */}
+        </Link>
+      ))}
+    </div>
+  ) : (
+    <p>No posts published.</p>
   );
 }
 
@@ -61,17 +76,39 @@ interface BlogPostCardProps {
   index: number;
 }
 
+const BlogCardSkeleton = () => {
+  return (
+    <div className='flex flex-col sm:flex-row'>
+      <Skeleton className='hidden h-[100px] w-[100px] rounded-[4px] border transition-colors dark:border-neutral-700 sm:block' />
+
+      <div className='flex w-full flex-col justify-center space-y-2 sm:ml-4'>
+        <span className='text-2xl font-extrabold'>
+          <Skeleton className='h-[32px] w-3/6' />
+        </span>
+        <span className='text-muted-foreground'>
+          <Skeleton className='h-[24px] w-full' />
+        </span>
+        <div className='flex flex-row items-center gap-2'>
+          <Skeleton className='h-[16px] w-[60px]' />
+          <Skeleton className='h-[16px] w-[40px]' />
+          <Skeleton className='h-[16px] w-[60px]' />
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const BlogCard = (props: BlogPostCardProps) => {
   const { metadata, slug } = props.post;
   const { image, title, summary, publishedAt } = metadata;
   return (
-    <article className='flex flex-col sm:flex-row'>
+    <article className='flex max-h-[120px] flex-col sm:flex-row'>
       <Image
         src={image}
         alt={slug}
         width={120}
-        height={100}
-        className='hidden rounded-[4px] border bg-muted transition-colors dark:border-neutral-700 sm:block'
+        height={120}
+        className='hidden rounded-[4px] border bg-muted object-cover transition-colors dark:border-neutral-700 sm:block'
         priority={props.index <= 1}
       />
 
@@ -80,10 +117,9 @@ const BlogCard = (props: BlogPostCardProps) => {
         <p className='text-muted-foreground'>{summary}</p>
         <div className='flex flex-row items-center gap-2'>
           <span className='text-sm text-neutral-600 dark:text-neutral-400'>
-            {getFullDate(publishedAt)}
+            {getFullDate(publishedAt)} &middot;
           </span>
           <span className='text-sm'>
-            &middot;{' '}
             <Suspense fallback={<Skeleton className='h-4 w-[60px]' />}>
               <Views slug={slug} />
             </Suspense>
