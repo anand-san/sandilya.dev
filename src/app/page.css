@@ -9,6 +9,10 @@
     'profile-image collaborations-links collaborations-links collaborations-links'
     'projects-info projects-info projects-info projects-info'
     'projects-info projects-info projects-info projects-info'
+    'kind-words kind-words kind-words kind-words'
+    'kind-words kind-words kind-words kind-words'
+    'achievements achievements achievements achievements'
+    'achievements achievements achievements achievements'
     'spotify-embed spotify-embed spotify-embed spotify-embed';
 }
 
@@ -21,6 +25,8 @@
       'collaborations-links collaborations-links collaborations-links collaborations-links'
       'projects-info projects-info projects-info projects-info'
       'projects-info projects-info projects-info projects-info'
+      'kind-words kind-words kind-words kind-words'
+      'kind-words kind-words kind-words kind-words'
       'spotify-embed spotify-embed spotify-embed spotify-embed';
   }
 }
@@ -47,4 +53,8 @@
 
 .projects-info {
   grid-area: projects-info;
+}
+
+.kind-words {
+  grid-area: kind-words;
 }
