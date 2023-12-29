@@ -9,7 +9,7 @@ import Image from 'next/image';
 export const TopNavBar = () => {
   const pathname = usePathname();
   return (
-    <Menubar className='mx-2 my-2 justify-between dark:bg-slate-950'>
+    <Menubar className='fixed top-0 mx-2 w-full justify-between bg-white dark:bg-slate-950'>
       <Link href='/'>
         <Image
           src='https://i.imgur.com/NWnsFzH.png'

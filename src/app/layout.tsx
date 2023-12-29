@@ -58,10 +58,10 @@ export default function RootLayout({
           disableTransitionOnChange
           storageKey='sandilya-theme'
         >
+          <TopNavBar />
           <main className='w-full max-w-3xl antialiased'>
             <TooltipProvider delayDuration={100} skipDelayDuration={100}>
-              <TopNavBar />
-              <div className='mt-2'>{children}</div>
+              <div className='mt-12 sm:mt-20'>{children}</div>
             </TooltipProvider>
           </main>
         </ThemeProvider>
