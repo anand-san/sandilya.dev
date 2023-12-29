@@ -19,7 +19,7 @@ export default function ProjectInfoContainer() {
       </div>
       <div className='py-6 lg:py-10'>
         <Link
-          href='/blog'
+          href='/work'
           className={cn(
             buttonVariants({ variant: 'ghost' }),
             'p-0 font-semibold'
