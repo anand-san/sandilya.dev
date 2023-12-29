@@ -51,7 +51,7 @@ interface BlogPageProps {
   }[];
 }
 
-export function BlogPage({ allBlogs }: BlogPageProps) {
+function BlogPage({ allBlogs }: BlogPageProps) {
   // TODO: Add a tab bar navigation based on tags
   return allBlogs?.length ? (
     <div className='flex flex-col gap-10'>
