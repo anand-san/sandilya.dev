@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { Menubar, MenubarMenu, MenubarTrigger } from './ui/menubar';
-import { GanttChartSquare, Mails } from 'lucide-react';
+import { ClipboardList, HomeIcon, Text } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { DarkModeToggle } from './dark-mode-switch';
 import Image from 'next/image';
@@ -20,26 +20,21 @@ export const TopNavBar = () => {
         />
       </Link>
       <div className='flex'>
-        {pathname !== '/' && (
-          <Link href='/'>
-            <MenubarMenu>
-              <MenubarTrigger>
-                <p className='hidden sm:block'>HOME</p>
-                <GanttChartSquare className='block sm:hidden' />
-              </MenubarTrigger>
-            </MenubarMenu>
-          </Link>
-        )}
-        {pathname !== '/blog' && (
-          <Link href='/blog'>
-            <MenubarMenu>
-              <MenubarTrigger>
-                <p className='hidden sm:block'>BLOG</p>
-                <GanttChartSquare className='block sm:hidden' />
-              </MenubarTrigger>
-            </MenubarMenu>
-          </Link>
-        )}
+        <Link href='/'>
+          <MenubarMenu>
+            <MenubarTrigger>
+              <HomeIcon />
+            </MenubarTrigger>
+          </MenubarMenu>
+        </Link>
+
+        <Link href='/blog'>
+          <MenubarMenu>
+            <MenubarTrigger>
+              <Text />
+            </MenubarTrigger>
+          </MenubarMenu>
+        </Link>
 
         <Link href='/work'>
           <MenubarMenu>
