@@ -7,8 +7,8 @@ import { ALL_PROJECTS, sortProjectsByOrder } from '@/lib/constants';
 
 export default function ProjectInfoContainer() {
   return (
-    <section className='projects-info mt-6 w-full items-center'>
-      <h6 className='my-8 text-2xl font-bold tracking-wider'>My Work</h6>
+    <section className='projects-info mt-10 w-full items-center'>
+      <h6 className='mb-10 text-2xl font-bold tracking-wider'>My Work 👨‍💻</h6>
 
       <div className='space-y-4'>
         {ALL_PROJECTS.filter((project) => project.featured)
@@ -17,7 +17,7 @@ export default function ProjectInfoContainer() {
             <ProjectCard project={project} key={project.order} />
           ))}
       </div>
-      <div className='py-6 lg:py-10'>
+      <div className='pt-6 lg:pt-10'>
         <Link
           href='/work'
           className={cn(
