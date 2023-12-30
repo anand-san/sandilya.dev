@@ -8,16 +8,8 @@ import { ALL_PROJECTS, sortProjectsByOrder } from '@/lib/constants';
 export default function ProjectInfoContainer() {
   return (
     <section className='projects-info mt-10 w-full items-center'>
-      <h6 className='mb-10 text-2xl font-bold tracking-wider'>My Work 👨‍💻</h6>
-
-      <div className='space-y-4'>
-        {ALL_PROJECTS.filter((project) => project.featured)
-          .sort(sortProjectsByOrder)
-          .map((project) => (
-            <ProjectCard project={project} key={project.order} />
-          ))}
-      </div>
-      <div className='pt-6 lg:pt-10'>
+      <div className='mb-10 flex items-center justify-between'>
+        <h6 className=' text-2xl font-bold tracking-wider'>My Work 👨‍💻</h6>
         <Link
           href='/work'
           className={cn(
@@ -25,9 +17,16 @@ export default function ProjectInfoContainer() {
             'p-0 font-semibold'
           )}
         >
-          View all projects
+          View All
           <ArrowRight className='ml-2 h-4 w-4' />
         </Link>
+      </div>
+      <div className='space-y-4'>
+        {ALL_PROJECTS.filter((project) => project.featured)
+          .sort(sortProjectsByOrder)
+          .map((project) => (
+            <ProjectCard project={project} key={project.order} />
+          ))}
       </div>
     </section>
   );
@@ -52,13 +51,13 @@ export const ProjectCard = ({
     project;
 
   return (
-    <div className='flex h-[180px] justify-between'>
-      <div className='space-y-2 sm:max-w-[50%]'>
-        <p className='text-sm text-gray-400'>{duration}</p>
-        <h2>{title}</h2>
-        <h3 className='tracking-wider text-gray-500 dark:text-gray-400'>
-          {description}
-        </h3>
+    <div className='flex min-h-[180px] justify-between rounded-[4px] bg-stone-100 p-4 pb-2 dark:bg-gray-800'>
+      <div className='flex flex-col justify-between space-y-2 sm:max-w-[55%]'>
+        {/* <p className='text-sm text-gray-400'>{duration}</p> */}
+        <div>
+          <h2 className='text-md font-bold'>{title}</h2>
+          <p className='text-gray-700 dark:text-gray-400'>{description}</p>
+        </div>
         <div className='space-x-4'>
           {url && (
             <Link
@@ -90,8 +89,8 @@ export const ProjectCard = ({
       <Image
         alt='project-image'
         src={imagePath || '/images/projects/default-image.png'}
-        width={200}
-        height={200}
+        width={180}
+        height={180}
         className='hidden rounded-full object-contain sm:block'
       />
     </div>
