@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function AchievementsContainer() {
   return (
@@ -16,7 +17,14 @@ export default function AchievementsContainer() {
         />
         <div className='mt-4 text-center'>
           <h1 className='text-xl font-bold'>
-            2x Spotlight Award at <a>Leadsquared</a>
+            2x Spotlight Award at{' '}
+            <Link
+              href={'https://leadsquared.com'}
+              target='_blank'
+              className='hover:underline'
+            >
+              Leadsquared
+            </Link>
           </h1>
           <p className='text-light'>Rewarded for exceptional performance</p>
         </div>
