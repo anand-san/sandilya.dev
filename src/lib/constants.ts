@@ -9,6 +9,14 @@ export const SOCIAL_URLS = {
 export const sortProjectsByOrder = (a: Project, b: Project) =>
   a.order - b.order;
 
+export interface Testimonial {
+  name: string;
+  designation?: string;
+  message: string;
+  imageUrl?: string;
+  classNames: string;
+}
+
 export const ALL_PROJECTS: Project[] = [
   {
     order: 1,
@@ -58,5 +66,39 @@ export const ALL_PROJECTS: Project[] = [
     imagePath: '/images/projects/leadsquared/main.png',
     featured: false,
     duration: '2021',
+  },
+];
+
+export const ALL_TESTIMONIALS: Testimonial[] = [
+  {
+    name: 'Rizwan Ali',
+    designation: 'Engineering Manager',
+    message:
+      'Anand has done an excellent job in managing and improving our systems consistently',
+    imageUrl: '/images/blog/transforming-cryptosurge/1.png',
+    classNames: 'testimonial-1 !hidden sm:!block',
+  },
+  {
+    name: 'Saurav Mishra',
+    designation: 'Engineering Manager',
+    message:
+      'Anand skills and knowledge are unparalleled. A highly reliable and capable professional.',
+    imageUrl: '/images/blog/transforming-cryptosurge/1.png',
+    classNames: 'testimonial-2',
+  },
+  {
+    name: 'Harshit',
+    designation: 'Technical Lead',
+    message:
+      'Anand is an exceptional software engineer, very easy going and enjoyable to be around.',
+    imageUrl: '/images/blog/transforming-cryptosurge/1.png',
+    classNames: 'testimonial-3',
+  },
+  {
+    name: 'Biswajit Das',
+    designation: 'Technical Lead',
+    message: 'Anand is an exceptional software engineer',
+    imageUrl: '/images/blog/transforming-cryptosurge/1.png',
+    classNames: 'testimonial-4 !hidden sm:!block',
   },
 ];
