@@ -21,7 +21,12 @@ export function DarkModeToggle() {
     setTheme(newTheme);
   };
 
-  if (!isMounted) return null;
+  if (!isMounted)
+    return (
+      <Button variant={'ghost'} size={'icon'}>
+        <Moon fill='#0f172a' />
+      </Button>
+    );
   return (
     <Button variant={'ghost'} size={'icon'} onClick={handleDarkMode}>
       {resolvedTheme === 'light' ? (
