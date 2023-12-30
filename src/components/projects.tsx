@@ -55,8 +55,8 @@ export const ProjectCard = ({
       <div className='flex flex-col justify-between space-y-2 sm:max-w-[55%]'>
         {/* <p className='text-sm text-gray-400'>{duration}</p> */}
         <div>
-          <h2 className='text-md font-bold'>{title}</h2>
-          <p className='text-gray-700 dark:text-gray-400'>{description}</p>
+          <span className='text-md font-bold'>{title}</span>
+          <p className='pt-2 text-gray-700 dark:text-gray-400'>{description}</p>
         </div>
         <div className='space-x-4'>
           {url && (
