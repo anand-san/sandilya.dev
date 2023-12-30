@@ -3,6 +3,7 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 2px;
   grid-template-areas:
+    'website-alert website-alert website-alert website-alert'
     'profile-image profile-description profile-description profile-description'
     'profile-image profile-description profile-description profile-description'
     'profile-image collaborations-info collaborations-info collaborations-info'
@@ -19,6 +20,7 @@
 @media (max-width: 640px) {
   .base-page {
     grid-template-areas:
+      'website-alert website-alert website-alert website-alert'
       'profile-image profile-image profile-image profile-image'
       'profile-description profile-description profile-description profile-description'
       'collaborations-info collaborations-info collaborations-info collaborations-info'
@@ -29,6 +31,9 @@
       'kind-words kind-words kind-words kind-words'
       'spotify-embed spotify-embed spotify-embed spotify-embed';
   }
+}
+.website-alert {
+  grid-area: website-alert;
 }
 
 .profile-image {
