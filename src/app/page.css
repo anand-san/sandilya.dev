@@ -10,7 +10,8 @@
     'projects-info projects-info projects-info projects-info'
     'kind-words kind-words kind-words kind-words'
     'spotify-embed spotify-embed spotify-embed spotify-embed'
-    'achievements achievements achievements achievements';
+    'achievements achievements achievements achievements'
+    'footer footer footer footer';
 }
 
 @media (max-width: 640px) {
@@ -23,9 +24,16 @@
       'collaborations-links collaborations-links collaborations-links collaborations-links'
       'projects-info projects-info projects-info projects-info'
       'kind-words kind-words kind-words kind-words'
-      'spotify-embed spotify-embed spotify-embed spotify-embed';
+      'spotify-embed spotify-embed spotify-embed spotify-embed'
+      'achievements achievements achievements achievements'
+      'footer footer footer footer';
   }
 }
+
+.footer {
+  grid-area: footer;
+}
+
 .website-alert {
   grid-area: website-alert;
 }

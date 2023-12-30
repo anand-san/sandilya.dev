@@ -15,13 +15,23 @@ export default function FooterContactCard() {
   } = getConfig();
 
   return (
-    <section className='grid items-center py-8 lg:container '>
-      <div className={`m-4 flex flex-col justify-between p-8 text-center`}>
-        <h1 className='text-2xl md:text-3xl'>Want to work together?</h1>
-        <p className='text-base font-extralight'>
-          Feel free to reach out for collaborations or just a friendly hello
-        </p>
-        <span className='text-base font-light'>anand@sandilya.dev</span>
+    <section className='footer my-10 grid items-center rounded-[4px] bg-stone-100 text-neutral-700 lg:container dark:bg-gray-800 dark:text-neutral-300 sm:mb-24'>
+      <div
+        className={`m-4 flex flex-col justify-between space-y-6 py-8 text-center`}
+      >
+        <h1 className='text-2xl md:text-3xl'>Lets work together?</h1>
+        <span>
+          <p className='text-base font-extralight'>
+            Reach out for collaborations or just a general chat at
+          </p>
+          <a
+            href={'mailto:anand@sandilya.dev'}
+            className='text-base font-light'
+          >
+            anand@sandilya.dev
+          </a>
+        </span>
+
         <div className='mt-12 flex justify-center'>
           <Tooltip>
             <TooltipTrigger>
