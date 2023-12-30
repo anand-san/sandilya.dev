@@ -2,8 +2,9 @@ import { ProfileInfoCard } from '@/components/profile-info-card';
 import FooterContactCard from '@/components/footer-contact-card';
 import ProjectInfoContainer from '@/components/projects';
 import KindWordsContainer from '@/components/kind-words';
+import AchievementsContainer from '@/components/achievements';
+
 import './page.css';
-// import AchievementsContainer from '@/components/achievements';
 
 export default function Home() {
   return (
@@ -12,11 +13,9 @@ export default function Home() {
         ⚠️ I am still working on this website. You might find some parts of the
         website not working as expected. Please bear with me 🙏
       </div>
-
       <ProfileInfoCard />
       <ProjectInfoContainer />
       <KindWordsContainer />
-
       <iframe
         className='spotify-embed mt-10'
         src='https://open.spotify.com/embed/track/3FVy3aVs0TFzLv6FEiLqC2?utm_source=generator&theme=1'
@@ -25,12 +24,9 @@ export default function Home() {
         allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'
         loading='lazy'
       ></iframe>
+      {/* Featured Blogs --  Match with Spotify style */}
 
-      {/* <AchievementsContainer /> */}
-
-      {/* <ProjectInfoCard /> */}
-      {/* <TestomonialsCard /> */}
-
+      <AchievementsContainer />
       <FooterContactCard />
     </div>
   );
