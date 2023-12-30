@@ -50,7 +50,7 @@ export const ProfileInfoCard = () => {
       {windowWidth ? (
         <Image
           alt='profile-picture'
-          className='profile-image pointer-events-none rounded-lg border border-solid border-neutral-300 shadow-xl dark:border-neutral-700'
+          className='profile-image pointer-events-none justify-self-center rounded-lg border border-solid border-neutral-300 shadow-xl dark:border-neutral-700'
           {...profileImageProps}
         />
       ) : (
