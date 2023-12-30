@@ -1,11 +1,9 @@
 import { ProfileInfoCard } from '@/components/profile-info-card';
-import ProjectInfoCard from '@/components/project-info-card';
 import FooterContactCard from '@/components/footer-contact-card';
-import TestomonialsCard from '@/components/testomonials-card';
 import ProjectInfoContainer from '@/components/projects';
 import KindWordsContainer from '@/components/kind-words';
 import './page.css';
-import AchievementsContainer from '@/components/achievements';
+// import AchievementsContainer from '@/components/achievements';
 
 export default function Home() {
   return (
@@ -18,16 +16,18 @@ export default function Home() {
       <ProfileInfoCard />
       <ProjectInfoContainer />
       <KindWordsContainer />
-      <AchievementsContainer />
 
-      {/* <iframe
-        className='spotify-embed bg-[#404040] dark:bg-[#404040]'
-        src='https://open.spotify.com/embed/track/3FVy3aVs0TFzLv6FEiLqC2?utm_source=generator&theme=0'
+      <iframe
+        className='spotify-embed mt-10'
+        src='https://open.spotify.com/embed/track/3FVy3aVs0TFzLv6FEiLqC2?utm_source=generator&theme=1'
         width='100%'
         height='80px'
         allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'
         loading='lazy'
-      ></iframe> */}
+      ></iframe>
+
+      {/* <AchievementsContainer /> */}
+
       {/* <ProjectInfoCard /> */}
       {/* <TestomonialsCard /> */}
 
