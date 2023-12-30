@@ -5,16 +5,12 @@
   grid-template-areas:
     'website-alert website-alert website-alert website-alert'
     'profile-image profile-description profile-description profile-description'
-    'profile-image profile-description profile-description profile-description'
     'profile-image collaborations-info collaborations-info collaborations-info'
     'profile-image collaborations-links collaborations-links collaborations-links'
     'projects-info projects-info projects-info projects-info'
-    'projects-info projects-info projects-info projects-info'
     'kind-words kind-words kind-words kind-words'
-    'kind-words kind-words kind-words kind-words'
-    'achievements achievements achievements achievements'
-    'achievements achievements achievements achievements'
-    'spotify-embed spotify-embed spotify-embed spotify-embed';
+    'spotify-embed spotify-embed spotify-embed spotify-embed'
+    'achievements achievements achievements achievements';
 }
 
 @media (max-width: 640px) {
@@ -26,8 +22,6 @@
       'collaborations-info collaborations-info collaborations-info collaborations-info'
       'collaborations-links collaborations-links collaborations-links collaborations-links'
       'projects-info projects-info projects-info projects-info'
-      'projects-info projects-info projects-info projects-info'
-      'kind-words kind-words kind-words kind-words'
       'kind-words kind-words kind-words kind-words'
       'spotify-embed spotify-embed spotify-embed spotify-embed';
   }
