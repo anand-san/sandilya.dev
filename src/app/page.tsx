@@ -18,7 +18,7 @@ export default function Home() {
       <KindWordsContainer />
       <iframe
         className='spotify-embed mt-10'
-        src='https://open.spotify.com/embed/track/3FVy3aVs0TFzLv6FEiLqC2?utm_source=generator&theme=1'
+        src='https://open.spotify.com/embed/album/0JLN7JryQ2T7lBEYIrSQF1?utm_source=generator'
         width='100%'
         height='80px'
         allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'
