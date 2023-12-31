@@ -9,15 +9,45 @@ authors: anand
 
 ![](/images/blog/transforming-cryptosurge/2.jpeg)
 
-In the dynamic world of cryptocurrency trading, efficient communication and access to crucial information are paramount for success. Adarsh, a seasoned crypto trader and COO at CryptoXpress, faced challenges in automating processes within his trading group, CryptoSurge. Seeking to streamline communication and enhance accessibility, he approached us to develop a series of Discord bots tailored to the specific needs of his community.
-
 ## Enhancing CryptoSurge: A Discord Bot Success Story
 
-## 1. Holistic Holdings Information
+**[Adarsh](https://twitter.com/davinciDXB)**, a seasoned crypto trader and COO at [CryptoXpress](https://cryptoxpress.com/) ([@crypto_express](https://twitter.com/crypto_xpress)),
+faced challenges in automating processes within his trading group, CryptoSurge.
+Which I was also a part of. He wanted to streamline communication and enhance accessibility to crucial information to his community members.
+Understanding the problems, I proposed to develop a series of Discord bots tailored to the needs of his community.
 
-To address the need for consolidated and accessible trading information, we developed a Discord bot capable of aggregating Adarsh's holdings from multiple exchanges, including Bitfinex, Binance, and Bitmex. Instead of presenting raw numbers, the bot utilized percentages to provide a clearer understanding of portfolio composition. Additionally, users could gauge Bitcoin dominance, adding a valuable layer of market insight.
+### In short, I needed to solve the following problems using Discord bots
 
-## 2. Cexy - Crypto Price Ticker App
+- Automate the process of sharing live holdings from multiple exchanges on demand
+- Provide real-time Aadarsh's order information
+- Provide real-time market information on demand
+- Share knowledge and enhance communication within the community and the new members of the community
+- Introduce engaging elements to the community
+
+### How I did it?
+
+#### Lets start with automating the process of sharing live holdings from multiple exchanges on demand
+
+To address the need for consolidated and accessible trading information, I developed a Discord bot capable of aggregating holdings from multiple exchanges,
+
+I was able to arrange the data from differnet exchanges where there were assets present using the exchange APIs. We wanted to present this information whenever
+a user sends a command in the chat `!portfolio` in this case. The cummunity was huge so we had to make sure that the bot responds to the command as fast as possible and also
+that it do not spams the exchanges API as in that case we would either hit the rate limit or get banned from using the API.
+
+I solved this by storing the latest data in a cache and creating a webhook that updates the cache whenever the portfolio changes.
+This helped the bot deliver the latest data to the users in a matter of milliseconds.
+Instead of presenting raw numbers, the bot utilized percentages to provide a clearer understanding of portfolio composition.
+
+![](/images/blog/transforming-cryptosurge/portfolio-bot.png)
+Image: The bot in action
+
+This feature enabled CryptoSurge members to make informed trading decisions based on Adarsh's portfolio
+
+#### Providing real-time Aadarsh's order information
+
+---
+
+Thats it so far lads
 
 Introducing Cexy, a sophisticated crypto price ticker app designed for Discord. Cexy not only displays real-time market prices but also offers comprehensive details such as price changes over 24 hours and 7 days, trade volume, and dominance percentages. This bot empowers CryptoSurge members with up-to-date information crucial for making informed trading decisions.
 
@@ -40,11 +70,3 @@ Recognizing the need for entertainment alongside market analysis, we introduced 
 ## Conclusion
 
 The implementation of these Discord bots not only addressed Adarsh's specific needs but also significantly enhanced the overall trading experience within CryptoSurge. By fostering efficient communication, providing real-time market insights, and introducing engaging elements, our tailored solutions have contributed to the growth and cohesion of this vibrant crypto community. As the crypto landscape continues to evolve, these bots stand as a testament to the power of innovation in streamlining and enhancing digital collaboration within trading groups.
-
-This is an example post, with a [link](https://nextjs.org) and a React component:
-
-{/* <TestComponent name='next-mdx-remote' /> */}
-
-The title and description are pulled from the MDX file and processed using `gray-matter`. Additionally, links are rendered using a custom component passed to `next-mdx-remote`.
-
-Go back [home](/).
