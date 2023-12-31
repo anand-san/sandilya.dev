@@ -73,6 +73,12 @@ export default function Blog({ params }: BlogProps) {
     notFound();
   }
 
+  let { title, publishedAt: publishedTime, image } = post.metadata;
+
+  let ogImage = `https://sandilya.dev/og?title=${title}&image=${image}&publishedAt=${publishedTime}&estimatedReadTime=${estimateReadingTime(
+    post.content
+  )}`;
+
   return (
     <section className='grid w-full justify-center'>
       <script
@@ -86,9 +92,7 @@ export default function Blog({ params }: BlogProps) {
             datePublished: post.metadata.publishedAt,
             dateModified: post.metadata.publishedAt,
             description: post.metadata.summary,
-            image: post.metadata.image
-              ? `https://sandilya.dev${post.metadata.image}`
-              : `https://sandilya.dev/og?title=${post.metadata.title}`,
+            image: ogImage,
             url: `https://sandilya.dev/blog/${post.slug}`,
             author: {
               '@type': 'Person',
