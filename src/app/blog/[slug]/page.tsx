@@ -28,9 +28,8 @@ export async function generateMetadata({
     title,
     publishedAt: publishedTime,
     summary: description,
-    image,
   } = post.metadata;
-  let ogImage = `https://sandilya.dev/og?title=${title}&image=${image}&publishedAt=${publishedTime}&estimatedReadTime=${estimateReadingTime(
+  let ogImage = `https://sandilya.dev/og?title=${title}&publishedAt=${publishedTime}&estimatedReadTime=${estimateReadingTime(
     post.content
   )}`;
 
@@ -73,9 +72,9 @@ export default function Blog({ params }: BlogProps) {
     notFound();
   }
 
-  let { title, publishedAt: publishedTime, image } = post.metadata;
+  let { title, publishedAt: publishedTime } = post.metadata;
 
-  let ogImage = `https://sandilya.dev/og?title=${title}&image=${image}&publishedAt=${publishedTime}&estimatedReadTime=${estimateReadingTime(
+  let ogImage = `https://sandilya.dev/og?title=${title}&publishedAt=${publishedTime}&estimatedReadTime=${estimateReadingTime(
     post.content
   )}`;
 
