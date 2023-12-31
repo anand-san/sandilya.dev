@@ -8,7 +8,7 @@ import { incrementPostView, getViewsCount } from '@/lib/db/blog';
 import Link from 'next/link';
 import { ChevronLeft } from 'lucide-react';
 import { buttonVariants } from '@/components/ui/button';
-import { cn } from '@/lib/utils';
+import { cn, estimateReadingTime } from '@/lib/utils';
 import { formatDate, getFullDate } from '../../../utils/format-date';
 import { Skeleton } from '@/components/ui/skeleton';
 
@@ -100,7 +100,8 @@ export default function Blog({ params }: BlogProps) {
       <h1 className='title max-w-[650px] text-2xl font-medium tracking-tighter'>
         {post.metadata.title}
       </h1>
-      <div className='mb-8 mt-2 flex max-w-[650px] items-center justify-between text-sm'>
+
+      <div className=' mt-2 flex max-w-[650px] items-center justify-between text-sm'>
         <p className='text-sm text-neutral-600 dark:text-neutral-400'>
           {getFullDate(post.metadata.publishedAt)} (
           {formatDate(post.metadata.publishedAt)})
@@ -109,7 +110,10 @@ export default function Blog({ params }: BlogProps) {
           <Views slug={post.slug} />
         </Suspense>
       </div>
-      <article className='prose prose-quoteless prose-neutral dark:prose-invert'>
+      <p className='mb-8 text-sm text-neutral-600 dark:text-neutral-400'>
+        {estimateReadingTime(post.content)} minute read
+      </p>
+      <article className='prose-quoteless prose prose-neutral dark:prose-invert'>
         <CustomMDX source={post.content} />
       </article>
 
