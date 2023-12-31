@@ -30,9 +30,9 @@ export async function generateMetadata({
     summary: description,
     image,
   } = post.metadata;
-  let ogImage = image
-    ? `https://sandilya.dev${image}`
-    : `https://sandilya.dev/og?title=${title}`;
+  let ogImage = `https://sandilya.dev/og?title=${title}&image=${image}&publishedAt=${publishedTime}&estimatedReadTime=${estimateReadingTime(
+    post.content
+  )}`;
 
   return {
     title,

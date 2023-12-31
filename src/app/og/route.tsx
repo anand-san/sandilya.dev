@@ -1,11 +1,17 @@
 import { ImageResponse } from 'next/og';
 import { NextRequest } from 'next/server';
+import Image from 'next/image';
 
 export const runtime = 'edge';
 
 export async function GET(req: NextRequest) {
   const { searchParams } = req.nextUrl;
+
   const postTitle = searchParams.get('title');
+  const postImage = searchParams.get('image');
+  const postPublishedAt = searchParams.get('publishedAt');
+  const postReadingTime = searchParams.get('estimatedReadTime');
+
   const font = fetch(
     new URL('../../../public/fonts/kaisei-tokumin-bold.ttf', import.meta.url)
   ).then((res) => res.arrayBuffer());
@@ -38,7 +44,17 @@ export async function GET(req: NextRequest) {
             whiteSpace: 'pre-wrap',
           }}
         >
-          {postTitle}
+          {postImage && (
+            <Image
+              src={postImage}
+              alt='blog-image'
+              style={{ borderRadius: '50%' }}
+            />
+          )}
+          <h2>{postTitle}</h2>
+          <p>
+            {postPublishedAt} &middot; {postReadingTime}
+          </p>
         </div>
       </div>
     ),
