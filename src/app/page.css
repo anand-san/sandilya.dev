@@ -3,8 +3,8 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 2px;
   grid-template-areas:
-    'website-alert website-alert website-alert website-alert'
     'profile-description profile-description profile-description profile-image'
+    'website-alert website-alert website-alert website-alert'
     'projects-info projects-info projects-info projects-info'
     'kind-words kind-words kind-words kind-words'
     'achievements achievements achievements achievements'
@@ -16,9 +16,9 @@
   .base-page {
     grid-template-columns: 1fr;
     grid-template-areas:
-      'website-alert'
       'profile-image'
       'profile-description'
+      'website-alert'
       'projects-info'
       'kind-words'
       'achievements'
