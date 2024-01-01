@@ -30,7 +30,7 @@ export const ALL_PROJECTS: Project[] = [
     duration: '2021',
   },
   {
-    order: 4,
+    order: 2,
     title: 'Bluprint',
     description:
       'Empowering businesses to efficiently manage employee data, contracts, and compliance in one centralized platform ',
@@ -40,7 +40,7 @@ export const ALL_PROJECTS: Project[] = [
     duration: '2021',
   },
   {
-    order: 5,
+    order: 3,
     title: 'Quantilope GmbH',
     description:
       'An automated, end-to-end platform mapping the entire market research process from the research question to the questionnaire design, professional panel management, in-depth analysis, and data visualization.',
@@ -50,7 +50,7 @@ export const ALL_PROJECTS: Project[] = [
     duration: '2021',
   },
   {
-    order: 6,
+    order: 4,
     title: 'Mieterengel GmbH',
     description:
       'MieterEngel helps tenants find affordable solutions to rental problems - legally secure, fast and digital.',
@@ -62,12 +62,51 @@ export const ALL_PROJECTS: Project[] = [
   },
 
   {
-    order: 6,
+    order: 5,
     title: 'Leadsquared',
     description:
       'Marketing automation and customer relationship management (CRM) solution for businesses, serving clients in industries such as finance, e-commerce, education, health etc',
     url: 'https://leadsquared.com/',
     imagePath: '/images/projects/leadsquared/main.png',
+    featured: false,
+    duration: '2021',
+  },
+  {
+    order: 8,
+    title: 'Covid19 India - Case Tracker Android App',
+    description:
+      'I built this app to track the covid19 cases in India. Users can see the total number of cases, people recovered, and losses based on the area they are living as well as overall country or the world. I sold this app later to Elewat Solutions',
+    imagePath: '/images/projects/elewat/main.png',
+    featured: false,
+    duration: '2021',
+  },
+
+  {
+    order: 9,
+    title: 'Epic Games Store - Unofficial Android App',
+    description:
+      'As Epic Games does not have an official app for their store on Android, I built this app to help users browse the store and get notified about the offers and free games',
+    imagePath: '/images/projects/epic-games-store-android/main.png',
+    featured: false,
+    duration: '2021',
+  },
+  {
+    order: 6,
+    title: 'Odd Beans Coffee',
+    description:
+      'I helped odd beans coffee setup their store. They are a coffee roastery based in bhubaneswar with a mission to let everyone experience the real taste of Good Coffee.',
+    url: 'https://www.oddbeanscoffee.com/',
+    imagePath: '/images/projects/oddbeanscoffee/main.jpg',
+    featured: false,
+    duration: '2021',
+  },
+  {
+    order: 7,
+    title: 'Sure Clickz',
+    description:
+      'E-Commerce store of Xerobit Ventures India that provides a comprehensive range of IT electronics and digital products. I worked with them in designing and developing the online store',
+    url: 'https://sureclickz.com/',
+    imagePath: '/images/projects/xerobit/main.png',
     featured: false,
     duration: '2021',
   },
