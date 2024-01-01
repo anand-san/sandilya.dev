@@ -4,7 +4,7 @@ import {
   TooltipTrigger,
   TooltipContent,
 } from '@/components/ui/tooltip';
-import { Instagram, Linkedin, Twitter, Github } from 'lucide-react';
+import { Linkedin, Twitter, Github } from 'lucide-react';
 import getConfig from 'next/config';
 import Link from 'next/link';
 import React from 'react';
@@ -15,18 +15,21 @@ export default function FooterContactCard() {
   } = getConfig();
 
   return (
-    <section className='footer my-10 grid items-center rounded-[4px] bg-stone-100 text-neutral-700 lg:container dark:bg-gray-800 dark:text-neutral-300 sm:mb-24'>
+    <section
+      id='collaborations'
+      className='footer my-10 grid items-center rounded-[4px] bg-stone-100 text-neutral-700 lg:container dark:bg-gray-800 dark:text-neutral-300 sm:mb-24'
+    >
       <div
         className={`m-4 flex flex-col justify-between space-y-6 py-8 text-center`}
       >
-        <h1 className='text-2xl md:text-3xl'>Lets work together?</h1>
+        <p className='text-2xl md:text-3xl'>Lets work together</p>
         <span>
           <p className='text-base font-extralight'>
-            Reach out for collaborations or just a general chat at
+            Reach out for collaborations or just to have a general chat at
           </p>
           <a
             href={'mailto:anand@sandilya.dev'}
-            className='text-base font-light'
+            className='text-base font-light underline'
           >
             anand@sandilya.dev
           </a>
