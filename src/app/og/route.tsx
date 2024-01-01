@@ -43,7 +43,7 @@ export async function GET(req: NextRequest) {
         <p
           style={{
             marginLeft: 120,
-            marginTop: -100,
+            marginTop: -75,
             display: 'flex',
             fontSize: 40,
             letterSpacing: '0.05em',
