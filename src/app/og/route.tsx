@@ -10,6 +10,7 @@ export async function GET(req: NextRequest) {
   const postTitle = searchParams.get('title');
   const postPublishedAt = searchParams.get('publishedAt');
   const postReadingTime = searchParams.get('estimatedReadTime');
+  const postSummary = searchParams.get('summary');
 
   return new ImageResponse(
     (
@@ -20,21 +21,20 @@ export async function GET(req: NextRequest) {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'flex-start',
-          justifyContent: 'center',
-          backgroundImage: 'url(https://sandilya.dev/og-bg.png)',
+          backgroundImage: 'url(http://sandilya.dev/og-bg.png)',
         }}
       >
         <div
           style={{
-            marginLeft: 190,
+            marginLeft: 100,
             marginRight: 190,
+            marginTop: 50,
+            marginBottom: 0,
             display: 'flex',
-            fontSize: 130,
-            fontFamily: 'Sans-serif',
-            letterSpacing: '-0.05em',
+            fontSize: 100,
+            letterSpacing: '0.05em',
             fontStyle: 'normal',
-            color: '#111827',
-            lineHeight: '120px',
+            color: '#f5f5f4',
             whiteSpace: 'pre-wrap',
           }}
         >
@@ -42,15 +42,26 @@ export async function GET(req: NextRequest) {
         </div>
         <p
           style={{
-            marginLeft: 190,
-            marginRight: 190,
+            marginLeft: 120,
+            marginTop: -100,
             display: 'flex',
-            fontSize: 30,
-            fontFamily: 'Sans-serif',
-            letterSpacing: '-0.05em',
+            fontSize: 40,
+            letterSpacing: '0.05em',
             fontStyle: 'normal',
-            color: '#111827',
-            lineHeight: '120px',
+            color: '#d6d3d1',
+            whiteSpace: 'pre-wrap',
+          }}
+        >
+          {postSummary}
+        </p>
+        <p
+          style={{
+            marginLeft: 120,
+            display: 'flex',
+            fontSize: 40,
+            letterSpacing: '0.05em',
+            fontStyle: 'normal',
+            color: '#a8a29e',
             whiteSpace: 'pre-wrap',
           }}
         >

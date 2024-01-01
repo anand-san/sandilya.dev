@@ -31,7 +31,7 @@ export async function generateMetadata({
   } = post.metadata;
   let ogImage = `https://sandilya.dev/og?title=${title}&publishedAt=${publishedTime}&estimatedReadTime=${estimateReadingTime(
     post.content
-  )}`;
+  )}&summary=${description}`;
 
   return {
     title,
@@ -72,11 +72,11 @@ export default function Blog({ params }: BlogProps) {
     notFound();
   }
 
-  let { title, publishedAt: publishedTime } = post.metadata;
+  let { title, publishedAt: publishedTime, summary } = post.metadata;
 
   let ogImage = `https://sandilya.dev/og?title=${title}&publishedAt=${publishedTime}&estimatedReadTime=${estimateReadingTime(
     post.content
-  )}`;
+  )}&summary=${summary}`;
 
   return (
     <section className='grid w-full justify-center'>
