@@ -3,9 +3,8 @@ import { ProjectCard } from '@/components/projects';
 import { ALL_PROJECTS, sortProjectsByOrder } from '@/lib/constants';
 
 export const metadata = {
-  title: 'Blog',
-  description:
-    'Read my case studies, thoughts on software development, design, and more.',
+  title: 'Work',
+  description: 'A summary of my work and contributions.',
 };
 
 export default function Page() {
