@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { Menubar, MenubarMenu, MenubarTrigger } from './ui/menubar';
-import { ClipboardList, HomeIcon, Text } from 'lucide-react';
+import { Briefcase, HomeIcon, PenLine } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { DarkModeToggle } from './dark-mode-switch';
 import Image from 'next/image';
@@ -23,7 +23,7 @@ export const TopNavBar = () => {
         <Link href='/'>
           <MenubarMenu>
             <MenubarTrigger>
-              <HomeIcon />
+              <HomeIcon color={pathname === '/' ? '#0ea5e9' : undefined} />
             </MenubarTrigger>
           </MenubarMenu>
         </Link>
@@ -31,7 +31,9 @@ export const TopNavBar = () => {
         <Link href='/blog'>
           <MenubarMenu>
             <MenubarTrigger>
-              <Text />
+              <PenLine
+                color={pathname.includes('/blog') ? '#0ea5e9' : undefined}
+              />
             </MenubarTrigger>
           </MenubarMenu>
         </Link>
@@ -39,7 +41,7 @@ export const TopNavBar = () => {
         <Link href='/work'>
           <MenubarMenu>
             <MenubarTrigger>
-              <ClipboardList />
+              <Briefcase color={pathname === '/work' ? '#0ea5e9' : undefined} />
             </MenubarTrigger>
           </MenubarMenu>
         </Link>
