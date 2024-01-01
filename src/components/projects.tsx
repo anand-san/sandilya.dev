@@ -91,7 +91,7 @@ export const ProjectCard = ({
         src={imagePath || '/images/projects/default-image.png'}
         width={160}
         height={160}
-        className='hidden rounded-full object-contain sm:block'
+        className='hidden object-contain sm:block'
       />
     </div>
   );
