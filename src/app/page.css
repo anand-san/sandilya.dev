@@ -4,9 +4,7 @@
   gap: 2px;
   grid-template-areas:
     'website-alert website-alert website-alert website-alert'
-    'profile-image profile-description profile-description profile-description'
-    'profile-image collaborations-info collaborations-info collaborations-info'
-    'profile-image collaborations-links collaborations-links collaborations-links'
+    'profile-description profile-description profile-description profile-image'
     'projects-info projects-info projects-info projects-info'
     'kind-words kind-words kind-words kind-words'
     'achievements achievements achievements achievements'
@@ -16,17 +14,16 @@
 
 @media (max-width: 640px) {
   .base-page {
+    grid-template-columns: 1fr;
     grid-template-areas:
-      'website-alert website-alert website-alert website-alert'
-      'profile-image profile-image profile-image profile-image'
-      'profile-description profile-description profile-description profile-description'
-      'collaborations-info collaborations-info collaborations-info collaborations-info'
-      'collaborations-links collaborations-links collaborations-links collaborations-links'
-      'projects-info projects-info projects-info projects-info'
-      'kind-words kind-words kind-words kind-words'
-      'achievements achievements achievements achievements'
-      'spotify-embed spotify-embed spotify-embed spotify-embed'
-      'footer footer footer footer';
+      'website-alert'
+      'profile-image'
+      'profile-description'
+      'projects-info'
+      'kind-words'
+      'achievements'
+      'spotify-embed'
+      'footer';
   }
 }
 
@@ -44,14 +41,6 @@
 
 .profile-description {
   grid-area: profile-description;
-}
-
-.collaborations-info {
-  grid-area: collaborations-info;
-}
-
-.collaborations-links {
-  grid-area: collaborations-links;
 }
 
 .spotify-embed {

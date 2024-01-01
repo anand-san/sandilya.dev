@@ -1,15 +1,11 @@
 'use client';
 
 import Image from 'next/image';
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from '@/components/ui/tooltip';
-import { Linkedin, Twitter, Github } from 'lucide-react';
-import { SOCIAL_URLS } from '@/lib/constants';
+import { ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { cn } from '@/lib/utils';
+import { buttonVariants } from './ui/button';
 
 export const ProfileInfoCard = () => {
   const [windowWidth, setWindowWidth] = useState(0);
@@ -50,7 +46,7 @@ export const ProfileInfoCard = () => {
       {windowWidth ? (
         <Image
           alt='profile-picture'
-          className='profile-image pointer-events-none justify-self-center rounded-lg border border-solid border-neutral-300 shadow-xl dark:border-neutral-700'
+          className='profile-image pointer-events-none justify-self-center rounded-[4px] border border-solid border-neutral-300 shadow-xl dark:border-neutral-700'
           {...profileImageProps}
         />
       ) : (
@@ -58,69 +54,50 @@ export const ProfileInfoCard = () => {
       )}
 
       <div
-        className={`profile-description flex h-[150px] flex-col items-center justify-center sm:h-[180px]`}
+        className={`profile-description mt-4 flex flex-col justify-center space-y-4 sm:mt-0`}
       >
-        <h1 className='text-center text-3xl font-semibold sm:text-left sm:text-4xl'>
-          Hi, I&apos;m Anand
+        <h1 className='text-3xl font-bold sm:text-left sm:text-4xl'>
+          hey there 👋 I&apos;m Anand
         </h1>
-        <p className='mt-2 text-center text-xl font-normal sm:text-left sm:text-xl'>
-          I build full stack products that people love
+        <p className='sm:text-md text-md mt-2 font-normal text-gray-700 dark:text-gray-400 sm:text-left'>
+          I help companies build full stack applications that users love.
+          Currently I <Link href={'/work'}>work</Link> as a full stack engineer
+          at{' '}
+          <Link href={'https://quantilope.com'} target='_blank'>
+            Quantilope
+          </Link>{' '}
+          where we are building an automated end to end market research
+          platform. I try to solve real world problems with my code and
+          engineering skills.
         </p>
-      </div>
-      <div
-        className={`collaborations-info flex flex-col justify-between text-center`}
-      >
-        <p className='text-base font-extralight'>
-          Reach out for collaborations or just a friendly hello
-          <br />
-          <span className='text-base font-light'>anand@sandilya.dev</span>
+        <p className='text-gray-700 dark:text-gray-400'>
+          In my free time, I sometimes create content, build side projects, play
+          piano and video games 🎹 🎮
         </p>
-      </div>
-      <div className='collaborations-links mb-4 mt-8 flex justify-center sm:mt-4'>
-        <Tooltip>
-          <TooltipTrigger>
-            <Link href={SOCIAL_URLS.LINKEDIN} target='_blank'>
-              <Linkedin
-                strokeWidth={1.25}
-                size={36}
-                className='ml-4 cursor-pointer text-[#0072b1] hover:fill-[#0072b1]'
-              />
-            </Link>
-          </TooltipTrigger>
-          <TooltipContent side='bottom'>
-            <p>Linkedin</p>
-          </TooltipContent>
-        </Tooltip>
 
-        <Tooltip>
-          <TooltipTrigger>
-            <Link href={SOCIAL_URLS.TWITTER} target='_blank'>
-              <Twitter
-                strokeWidth={1.25}
-                size={36}
-                className='ml-4 cursor-pointer text-[#1DA1F2] hover:fill-[#1DA1F2]'
-              />
-            </Link>
-          </TooltipTrigger>
-          <TooltipContent side='bottom'>
-            <p>Twitter/ X</p>
-          </TooltipContent>
-        </Tooltip>
-
-        <Tooltip>
-          <TooltipTrigger>
-            <Link href={SOCIAL_URLS.GITHUB} target='_blank'>
-              <Github
-                strokeWidth={1.25}
-                size={36}
-                className='ml-4 cursor-pointer text-[#171515] hover:fill-[#171515] dark:text-[#fff] dark:hover:fill-[#fff]'
-              />
-            </Link>
-          </TooltipTrigger>
-          <TooltipContent side='bottom'>
-            <p>Github</p>
-          </TooltipContent>
-        </Tooltip>
+        <div className='space-x-4'>
+          <Link
+            href={'#collaborations'}
+            className={cn(
+              buttonVariants({ variant: 'ghost' }),
+              'p-0 font-semibold'
+            )}
+            // target='_blank'
+          >
+            Get in touch
+            <ArrowUpRight className='ml-2 h-4 w-4' />
+          </Link>
+          {/* <Link
+            href={'https://twitter.com/anandsan_'}
+            className={cn(
+              buttonVariants({ variant: 'ghost' }),
+              'p-0 font-semibold'
+            )}
+          >
+            Follow me
+            <ArrowUpRight className='ml-2 h-4 w-4' />
+          </Link> */}
+        </div>
       </div>
     </>
   );
