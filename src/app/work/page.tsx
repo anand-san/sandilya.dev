@@ -1,4 +1,3 @@
-import { getBlogPosts } from '@/lib/blog-mdx-utils';
 import { ProjectCard } from '@/components/projects';
 import { ALL_PROJECTS, sortProjectsByOrder } from '@/lib/constants';
 
@@ -8,15 +7,6 @@ export const metadata = {
 };
 
 export default function Page() {
-  let allBlogs = getBlogPosts();
-
-  allBlogs.sort((a, b) => {
-    if (new Date(a.metadata.publishedAt) > new Date(b.metadata.publishedAt)) {
-      return -1;
-    }
-    return 1;
-  });
-
   return (
     <section className='pt-6 sm:pt-2'>
       <div className='flex flex-col'>
