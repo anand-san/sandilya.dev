@@ -42,9 +42,10 @@ export const ALL_PROJECTS: Project[] = [
   {
     order: 5,
     title: 'Quantilope GmbH',
-    description: '',
+    description:
+      'An automated, end-to-end platform mapping the entire market research process from the research question to the questionnaire design, professional panel management, in-depth analysis, and data visualization.',
     url: 'https://www.quantilope.com/',
-    imagePath: '/images/projects/quantilope/main.svg',
+    imagePath: '/images/projects/quantilope/main.png',
     featured: false,
     duration: '2021',
   },
