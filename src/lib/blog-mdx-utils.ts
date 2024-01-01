@@ -8,6 +8,7 @@ export type Metadata = {
   image: string;
   author?: string;
   tags?: string;
+  published: string;
 };
 
 function parseFrontmatter(fileContent: string) {
@@ -61,5 +62,7 @@ function getMDXData(dir: PathLike) {
 }
 
 export function getBlogPosts() {
-  return getMDXData(path.join(process.cwd(), 'content'));
+  return getMDXData(path.join(process.cwd(), 'content')).filter(
+    (blog) => blog.metadata.published === 'true'
+  );
 }
