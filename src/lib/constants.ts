@@ -51,9 +51,11 @@ export const ALL_PROJECTS: Project[] = [
   {
     order: 6,
     title: 'Mieterengel GmbH',
-    description: '',
+    description:
+      'MieterEngel helps tenants find affordable solutions to rental problems - legally secure, fast and digital.',
     url: 'https://mieterengel.de/',
-    imagePath: '/images/projects/mieterengel/main.jpeg',
+    imagePath: '/images/projects/mieterengel/main.png',
+    caseStudyUrl: '/blog/mieterengel',
     featured: false,
     duration: '2021',
   },
