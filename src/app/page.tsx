@@ -8,7 +8,7 @@ import './page.css';
 
 export default function Home() {
   return (
-    <div className='base-page m-2'>
+    <div className='base-page'>
       <div className='website-alert mb-4 mt-2 rounded-[4px] border p-4 sm:mt-0'>
         ⚠️ I am still working on this website. You might find some parts of the
         website not working as expected. Please bear with me 🙏

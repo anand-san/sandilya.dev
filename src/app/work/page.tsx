@@ -18,11 +18,11 @@ export default function Page() {
   });
 
   return (
-    <section className='container py-6 lg:py-10'>
+    <section className='pt-6 sm:pt-2'>
       <div className='flex flex-col'>
         <div className='flex-1 space-y-4'>
           <p className='text-lg text-muted-foreground sm:text-xl'>
-            Things that I have worked on
+            A summary of my work and contributions.
           </p>
         </div>
       </div>

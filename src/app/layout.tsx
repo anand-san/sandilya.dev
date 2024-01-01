@@ -61,7 +61,7 @@ export default function RootLayout({
           <TopNavBar />
           <main className='w-full max-w-3xl antialiased'>
             <TooltipProvider delayDuration={100} skipDelayDuration={100}>
-              <div className='mt-12 sm:mt-20'>{children}</div>
+              <div className='m-4 mt-12 sm:mt-20'>{children}</div>
             </TooltipProvider>
           </main>
         </ThemeProvider>
