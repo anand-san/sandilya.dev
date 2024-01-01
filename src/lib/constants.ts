@@ -63,7 +63,8 @@ export const ALL_PROJECTS: Project[] = [
   {
     order: 6,
     title: 'Leadsquared',
-    description: '',
+    description:
+      'Marketing automation and customer relationship management (CRM) solution for businesses, serving clients in industries such as finance, e-commerce, education, health etc',
     url: 'https://leadsquared.com/',
     imagePath: '/images/projects/leadsquared/main.png',
     featured: false,
