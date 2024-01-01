@@ -35,7 +35,7 @@ export const ALL_PROJECTS: Project[] = [
     description:
       'Empowering businesses to efficiently manage employee data, contracts, and compliance in one centralized platform ',
     url: 'https://ps.leadsquaredapps.com',
-    imagePath: '/images/projects/bluprint/main.avif',
+    imagePath: '/images/projects/bluprint/main.png',
     featured: true,
     duration: '2021',
   },
