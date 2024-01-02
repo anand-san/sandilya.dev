@@ -6,6 +6,7 @@ import { cn } from '@/lib/utils';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import { TopNavBar } from '@/components/navbar';
 const inter = Inter({ subsets: ['greek'], weight: '300' });
+import { GoogleTagManager } from '@next/third-parties/google';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://sandilya.dev'),
@@ -66,6 +67,7 @@ export default function RootLayout({
           </main>
         </ThemeProvider>
       </body>
+      <GoogleTagManager gtmId={process.env.GOOGLE_TAG_MANAGER_ID || ''} />
     </html>
   );
 }
