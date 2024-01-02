@@ -20,7 +20,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --sh-class: #4c97f8;
-    --sh-identifier: white;
+    --sh-identifier: rgb(158, 158, 158);
     --sh-keyword: #f47067;
     --sh-string: #0fa295;
   }
@@ -73,7 +73,7 @@ html {
 }
 
 .prose code span {
-  @apply font-medium;
+  @apply font-medium text-stone-600;
 }
 
 .prose img {
