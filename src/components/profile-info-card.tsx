@@ -60,9 +60,8 @@ export const ProfileInfoCard = () => {
           hey there 👋 I&apos;m Anand
         </h1>
         <p className='sm:text-md text-md mt-2 font-normal text-gray-700 dark:text-gray-400 sm:text-left'>
-          I help companies build full stack applications that users love.
-          Currently I <Link href={'/work'}>work</Link> as a full stack engineer
-          at{' '}
+          I help companies build products that users love. Currently I{' '}
+          <Link href={'/work'}>work</Link> as a product engineer at{' '}
           <Link href={'https://quantilope.com'} target='_blank'>
             Quantilope
           </Link>{' '}
