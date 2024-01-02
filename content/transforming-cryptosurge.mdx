@@ -22,8 +22,7 @@ Understanding the problems, I proposed to develop a series of Discord bots tailo
 - Automate the process of sharing live holdings from multiple exchanges on demand
 - Provide real-time Aadarsh's order information
 - Provide real-time market information on demand
-- Share knowledge and enhance communication within the community and the new members of the community
-- Introduce engaging elements to the community
+- Share knowledge and enhance communication within the community and introduce engaging elements to the community
 
 ### How I did it?
 
@@ -46,28 +45,48 @@ This feature enabled CryptoSurge members to make informed trading decisions base
 
 #### Providing real-time Aadarsh's order information
 
----
+The requirement was to provide a real-time update whenever an order is palced.
+None of the exchanges at that time provided a webhook for this that could push data automatically when an order is palced so we had to come up with my own custom solution for this.
 
-Thats it so far lads
+Here is what I did, I created a server that checkes with multiple exchanges every X seconds if there is any new order that was placed between the last query and the current query, If there is an order then it sends a message to the Discord channel with the order information.
+I know, It's not actual really really realtime but its very close to it consiering we are not exhausting the API limits. Here is how the system looked like.
 
-Introducing Cexy, a sophisticated crypto price ticker app designed for Discord. Cexy not only displays real-time market prices but also offers comprehensive details such as price changes over 24 hours and 7 days, trade volume, and dominance percentages. This bot empowers CryptoSurge members with up-to-date information crucial for making informed trading decisions.
+![](/images/blog/transforming-cryptosurge/order-bot-system-diagram.png)
 
-## 3. Personal Twitter Feed App
+And here is the bot in action
 
-Enhancing communication within the community, we developed an app that automatically relays messages to the Discord channel whenever Adarsh posts on Twitter. This feature ensures that CryptoSurge members stay well-informed about the latest developments and insights directly from Adarsh.
+![](/images/blog/transforming-cryptosurge/order-bot.png)
 
-## 4. Crypto Twitter News
+#### That moves us to providing real-time market information on demand
 
-Keeping pace with the fast-paced world of crypto, our team built a bot capable of subscribing to multiple Twitter profiles. This bot notifies the Discord channel promptly whenever there is a new tweet from the subscribed accounts, ensuring that CryptoSurge members are always in the loop on relevant industry updates.
+Basically we nedded a bot that could provide real-time information about the market and the tokens.
+The bot should be able to provide information about any (limited to known ones) crypto token on demand.
+First of all this required a query from user about the token information they require.
+Then the bot should be able to fetch the information from the API and present it to the user.
 
-## 5. Discord DM Bot
+Fortunately, there are a lot of APIs available which could give you enough details about a token.
+In this case we used CoinGecko API to fetch the information about the token.
 
-Acknowledging the importance of onboarding, we implemented a Discord Direct Message (DM) bot that automatically sends private messages to new members. These messages contain essential information about server rules and guidelines, facilitating a smooth integration into the CryptoSurge community.
+Introducing Cexy, a sophisticated crypto price ticker app designed for Discord. Cexy not only displays real-time market prices but also offers comprehensive details such as price changes over 24 hours and 7 days, trade volume, and dominance percentages.
 
-## 6. Logo Quiz Bot
+Here is an image of the query response from the bot.
 
-Recognizing the need for entertainment alongside market analysis, we introduced a Logo Quiz Crypto app. This engaging feature presents users with crypto token logos, challenging them to identify the corresponding tokens. Participants earn points for correct guesses, fostering a lively and interactive environment within the community.
+![](/images/blog/transforming-cryptosurge/cexy-bot.png)
+
+#### Share knowledge and enhance communication within the community and introduce engaging elements to the community
+
+Here are some of the additional bots that were developed
+
+- CryptoSurge TA Helper: A bot that helps users to check if a token is bullish or bearish based on certain technical analysis indicators
+  ![](/images/blog/transforming-cryptosurge/ta-helper-bot.png)
+
+- Gyaani - crypto logo Quiz: A bot that presents users with crypto token logos, challenging them to identify the corresponding tokens. Participants earn points for correct guesses, fostering a lively and interactive environment within the community.
+- Crypto Twitter News: A bot that notifies the Discord channel promptly whenever there is a new tweet from the subscribed accounts, ensuring that CryptoSurge members are always in the loop on relevant industry updates.
+  ![](/images/blog/transforming-cryptosurge/twitter-posts-bot.png)
+- Discord Welcome DM Bot: A bot that automatically sends private messages to new members. These messages contain essential information about server rules and guidelines, facilitating a smooth integration into the CryptoSurge community.
+- BOGGED - Bitmex Whale Alerts: A bot that notifies the Discord channel whenever there is a large order on Bitmex.
+  ![](/images/blog/transforming-cryptosurge/bogged-whale-alert-bot.png)
 
 ## Conclusion
 
-The implementation of these Discord bots not only addressed Adarsh's specific needs but also significantly enhanced the overall trading experience within CryptoSurge. By fostering efficient communication, providing real-time market insights, and introducing engaging elements, our tailored solutions have contributed to the growth and cohesion of this vibrant crypto community. As the crypto landscape continues to evolve, these bots stand as a testament to the power of innovation in streamlining and enhancing digital collaboration within trading groups.
+The implementation of these Discord bots not only addressed Adarsh's specific needs but also significantly enhanced the overall trading experience within CryptoSurge. By fostering efficient communication, providing real-time market insights, and introducing engaging elements, my tailored solutions have contributed to the growth and cohesion of this vibrant crypto community. As the crypto landscape continues to evolve, these bots stand as a testament to the power of innovation in streamlining and enhancing digital collaboration within trading groups.
