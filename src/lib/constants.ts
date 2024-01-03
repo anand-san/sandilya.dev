@@ -116,7 +116,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
   {
     name: 'Biswajit Das',
     designation: 'Managing Director, Xerobit Ventures',
-    message: 'Anand is an exceptional software engineer',
+    message:
+      'Exceeded all my expectations, From initial consultation to the final product, every step of the process was handled with professionalism and expertise.',
     imageUrl: '/images/testimonials/biswajit.png',
     classNames: 'testimonial-1',
   },
@@ -124,7 +125,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     name: 'Rizwan Ali',
     designation: 'Engineering Manager',
     message:
-      'Anand has done an excellent job in managing and improving our systems consistently',
+      'Anand did an excellent job in managing and improving our systems consistently, He bought energy and dependability that has made him crucial to the team.',
     imageUrl: '/images/testimonials/rizwan.png',
     classNames: 'testimonial-2',
   },
@@ -132,7 +133,7 @@ export const ALL_TESTIMONIALS: Testimonial[] = [
     name: 'Saurav Mishra',
     designation: 'Engineering Manager',
     message:
-      'Anand skills and knowledge are unparalleled. A highly reliable and capable professional.',
+      'Anand is passionate about writing quality code and solving problems through the development of creative and innovative software.',
     imageUrl: '/images/testimonials/saurav.png',
     classNames: 'testimonial-3 !hidden sm:!block',
   },
