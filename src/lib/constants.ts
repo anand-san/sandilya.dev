@@ -114,34 +114,34 @@ export const ALL_PROJECTS: Project[] = [
 
 export const ALL_TESTIMONIALS: Testimonial[] = [
   {
+    name: 'Biswajit Das',
+    designation: 'Managing Director, Xerobit Ventures',
+    message: 'Anand is an exceptional software engineer',
+    imageUrl: '/images/testimonials/biswajit.png',
+    classNames: 'testimonial-1',
+  },
+  {
     name: 'Rizwan Ali',
     designation: 'Engineering Manager',
     message:
       'Anand has done an excellent job in managing and improving our systems consistently',
-    imageUrl: '/images/blog/transforming-cryptosurge/1.png',
-    classNames: 'testimonial-1 !hidden sm:!block',
+    imageUrl: '/images/testimonials/rizwan.png',
+    classNames: 'testimonial-2',
   },
   {
     name: 'Saurav Mishra',
     designation: 'Engineering Manager',
     message:
       'Anand skills and knowledge are unparalleled. A highly reliable and capable professional.',
-    imageUrl: '/images/blog/transforming-cryptosurge/1.png',
-    classNames: 'testimonial-2',
+    imageUrl: '/images/testimonials/saurav.png',
+    classNames: 'testimonial-3 !hidden sm:!block',
   },
   {
     name: 'Harshit',
     designation: 'Technical Lead',
     message:
       'Anand is an exceptional software engineer, very easy going and enjoyable to be around.',
-    imageUrl: '/images/blog/transforming-cryptosurge/1.png',
-    classNames: 'testimonial-3',
-  },
-  {
-    name: 'Biswajit Das',
-    designation: 'Technical Lead',
-    message: 'Anand is an exceptional software engineer',
-    imageUrl: '/images/blog/transforming-cryptosurge/1.png',
+    imageUrl: '/images/testimonials/harshit.png',
     classNames: 'testimonial-4 !hidden sm:!block',
   },
 ];
