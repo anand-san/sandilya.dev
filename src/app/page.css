@@ -5,10 +5,10 @@
   grid-template-areas:
     'profile-description profile-description profile-description profile-image'
     'website-alert website-alert website-alert website-alert'
+    'featured-blog featured-blog featured-blog featured-blog'
     'projects-info projects-info projects-info projects-info'
     'kind-words kind-words kind-words kind-words'
     'achievements achievements achievements achievements'
-    'spotify-embed spotify-embed spotify-embed spotify-embed'
     'footer footer footer footer';
 }
 
@@ -19,12 +19,16 @@
       'profile-image'
       'profile-description'
       'website-alert'
+      'featured-blog'
       'projects-info'
       'kind-words'
       'achievements'
-      'spotify-embed'
       'footer';
   }
+}
+
+.featured-blog {
+  grid-area: featured-blog;
 }
 
 .footer {

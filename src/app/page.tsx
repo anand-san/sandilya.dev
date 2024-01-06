@@ -5,6 +5,7 @@ import KindWordsContainer from '@/components/kind-words';
 import AchievementsContainer from '@/components/achievements';
 
 import './page.css';
+import FeaturedBlog from '@/components/featured-blog';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <ProfileInfoCard />
       <ProjectInfoContainer />
       <KindWordsContainer />
+      <FeaturedBlog />
       {/* Featured Blogs --  Match with Spotify style */}
 
       <AchievementsContainer />

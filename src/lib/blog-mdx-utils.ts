@@ -9,6 +9,7 @@ export type Metadata = {
   author?: string;
   tags?: string;
   published: string;
+  featured?: string;
 };
 
 function parseFrontmatter(fileContent: string) {
