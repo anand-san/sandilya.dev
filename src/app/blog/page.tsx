@@ -24,7 +24,20 @@ export default function Page() {
     return 1;
   });
 
-  return <BlogPage allBlogs={allBlogs} />;
+  return (
+    <section className='w-full pt-6 sm:pt-2'>
+      <div className='flex flex-col'>
+        <div className='flex-1 space-y-4'>
+          <p className='text-center text-lg text-muted-foreground sm:text-xl'>
+            Read my case studies, thoughts on software development, design, and
+            more.
+          </p>
+        </div>
+      </div>
+      <hr className='m-auto my-10 w-24' />
+      <BlogPage allBlogs={allBlogs} />
+    </section>
+  );
 }
 
 interface BlogPageProps {
@@ -65,7 +78,7 @@ const BlogCard = (props: BlogPostCardProps) => {
   const { metadata, slug } = props.post;
   const { image, title, summary, publishedAt } = metadata;
   return (
-    <article className='flex max-h-[150px] flex-col rounded-[4px] bg-stone-100 p-4 py-4 dark:bg-gray-800 sm:flex-row'>
+    <article className='flex max-h-[180px] min-h-[150px] flex-col rounded-[4px] bg-stone-100 p-4 py-4 dark:bg-gray-800 sm:flex-row'>
       <Image
         src={image}
         alt={slug}
