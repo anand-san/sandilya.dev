@@ -14,7 +14,7 @@ export default function ViewCounter({
 
   return (
     <span className='text-neutral-600 dark:text-neutral-400'>
-      {`${number.toLocaleString()} views`}
+      ❤️ {`${number.toLocaleString()}`}
     </span>
   );
 }

@@ -98,7 +98,7 @@ const BlogCard = (props: BlogPostCardProps) => {
   );
 };
 
-async function Views({ slug }: { slug: string }) {
+export async function Views({ slug }: { slug: string }) {
   let views = await getViewsCount();
 
   return <ViewCounter allViews={views} slug={slug} />;
