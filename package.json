@@ -28,6 +28,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-tweet": "^3.2.0",
+    "react-yandex-metrika": "^2.6.0",
     "sharp": "^0.33.1",
     "sugar-high": "^0.5.6",
     "tailwind-merge": "^1.14.0",

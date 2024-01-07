@@ -7,6 +7,7 @@ import { TooltipProvider } from '@/components/ui/tooltip';
 import { TopNavBar } from '@/components/navbar';
 const inter = Inter({ subsets: ['greek'], weight: '300' });
 import { GoogleTagManager } from '@next/third-parties/google';
+import { YandexMetrica } from '@/providers/yandex-metrica';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://sandilya.dev'),
@@ -60,11 +61,13 @@ export default function RootLayout({
           storageKey='sandilya-theme'
         >
           <TopNavBar />
-          <main className='w-full max-w-3xl antialiased'>
-            <TooltipProvider delayDuration={100} skipDelayDuration={100}>
-              <div className='m-4 mt-12 sm:mt-20'>{children}</div>
-            </TooltipProvider>
-          </main>
+          <YandexMetrica>
+            <main className='w-full max-w-3xl antialiased'>
+              <TooltipProvider delayDuration={100} skipDelayDuration={100}>
+                <div className='m-4 mt-12 sm:mt-20'>{children}</div>
+              </TooltipProvider>
+            </main>
+          </YandexMetrica>
         </ThemeProvider>
       </body>
       <GoogleTagManager gtmId={process.env.GOOGLE_TAG_MANAGER_ID || ''} />

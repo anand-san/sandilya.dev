@@ -5,7 +5,8 @@ import { ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
-import { buttonVariants } from './ui/button';
+import { Button, buttonVariants } from './ui/button';
+import { pointYandexGoal } from '@/lib/point-yandex-goal';
 
 export const ProfileInfoCard = () => {
   const [windowWidth, setWindowWidth] = useState(0);
@@ -75,8 +76,11 @@ export const ProfileInfoCard = () => {
         </p>
 
         <div className='space-x-4'>
-          <Link
-            href={'#collaborations'}
+          <Button
+            onClick={() => {
+              pointYandexGoal('get-in-touch');
+              window.location.href = 'mailto:hi@sandilya.dev';
+            }}
             className={cn(
               buttonVariants({ variant: 'ghost' }),
               'p-0 font-semibold'
@@ -85,7 +89,7 @@ export const ProfileInfoCard = () => {
           >
             Get in touch
             <ArrowUpRight className='ml-2 h-4 w-4' />
-          </Link>
+          </Button>
           {/* <Link
             href={'https://twitter.com/anandsan_'}
             className={cn(
