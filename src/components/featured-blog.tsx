@@ -18,7 +18,7 @@ export default function FeaturedBlog() {
         <Link href={`/blog/${post.slug}`} key={post.slug}>
           <div
             key={index}
-            className='flex max-h-[120px] min-h-[100px] cursor-pointer items-center rounded-[4px] bg-stone-100 p-4 dark:bg-gray-800 sm:flex-row'
+            className='flex max-h-[120px] min-h-[100px] cursor-pointer items-center rounded-[4px] bg-stone-100 p-4 hover:bg-stone-200 dark:bg-slate-800 hover:dark:bg-gray-700 sm:flex-row'
           >
             <Image
               src={post.metadata.image}

@@ -78,7 +78,7 @@ const BlogCard = (props: BlogPostCardProps) => {
   const { metadata, slug } = props.post;
   const { image, title, summary, publishedAt } = metadata;
   return (
-    <article className='flex max-h-[180px] min-h-[150px] flex-col rounded-[4px] bg-stone-100 p-4 py-4 dark:bg-gray-800 sm:flex-row'>
+    <article className='flex max-h-[180px] min-h-[150px] flex-col rounded-[4px] bg-stone-100 p-4 py-4 hover:bg-stone-200 dark:bg-gray-800 hover:dark:bg-gray-700  sm:flex-row'>
       <Image
         src={image}
         alt={slug}
